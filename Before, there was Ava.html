@@ -1,4 +1,4 @@
-<tw-storydata name="Before, there was Ava" startnode="1" creator="Twine" creator-version="2.3.2" ifid="3520C1CD-2D62-4E2B-9751-1616125E7E7B" zoom="0.25" format="Paloma" format-version="1.1.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap');
+<tw-storydata name="Before, there was Ava" startnode="1" creator="Twine" creator-version="2.3.2" ifid="3520C1CD-2D62-4E2B-9751-1616125E7E7B" zoom="0.6" format="Paloma" format-version="1.1.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap');
 
 body {
   background-color: black; 
@@ -16,6 +16,10 @@ a {
     border-bottom: 2px solid #419eaf;
 }
 
+#passage, #phistory, #psub, #ptitle {
+    max-width: 24em;
+}
+
 #ptitle {
    font-family: 'Amatic SC', cursive;
    font-size: 40px;
@@ -29,7 +33,11 @@ a {
     text-decoration: none;
   	border-bottom: none;
 }
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">var Global = {};
+
+Global.playerName = "Rachel";
+Global.playerGender = "a";
 
 Global.bemEstar = 50;
 Global.amizade = 50;
@@ -38,10 +46,17 @@ Global.visited = 0;
 
 Global.investiga2a1Visited = false;
 Global.investiga2a2Visited = false;
-Global.armarioVisited = false;
+Global.armario1Visited = false;
 Global.investiga2a5Visited = false;
-Global.fotoVisited = false;
+Global.foto1Visited = false;
 Global.investiga2a8visited = false;
+
+Global.investiga2b1Visited = false;
+Global.investiga2b2Visited = false;
+Global.armario2Visited = false;
+Global.investiga2b5Visited = false;
+Global.foto2Visited = false;
+Global.investiga2b8visited = false;
 
 
 Global.mudarEstado = function mudarEstado(x,y) {
@@ -74,9 +89,10 @@ $(window).on('showpassage:after', function (e, data)
 
 window.Global = Global;
 
+
 </script><tw-passagedata pid="1" name="CENA 1" tags="" position="3594,57" size="200,200">O escritório é relativamente pequeno, em cores escuras e empoeirado. Possui duas camas improvisadas próximas à janela, prateleiras parcialmente vazias na parede ao lado, uma escrivaninha sobre a qual está um computador antigo desligado e estantes altas cheias de documentos antigos. A mochila da Kiska está no pé do seu colchão.
 
-Ouve-se um BARULHO ALTO e a energia da casa acaba. Jogador e Kiska acordam assustados.
+Você e Kiska acordam assustad&lt;%=Global.playerGender%&gt;s com um barulho alto. A energia da casa deve ter acabado.
 
 J:[[Você ouviu isso?-&gt;Persiana 1]]
 
@@ -85,11 +101,11 @@ J:[[Acho que a luz acabou.-&gt;Persiana 1]]
 J:[[&lt;a onclick=&quot;Global.mudarEstado(2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana 1&quot;&gt;Kiska, tá tudo bem aí?&lt;/a&gt;-&gt;Persiana 1]]
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana 1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Persiana 1]]
-</tw-passagedata><tw-passagedata pid="2" name="Persiana 1" tags="" position="3643,291" size="100,100">O jogador está deitado na cama mais próxima da janela. Ele pode [[&lt;a onclick=&quot;Global.mudarEstado(1,1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana aberta 1.A&quot;&gt;abrir a persiana&lt;/a&gt;-&gt;Persiana aberta 1.A]] ou [[&lt;a onclick=&quot;Global.mudarEstado(-1,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana fechada 1.B&quot;&gt;esperar&lt;/a&gt;-&gt;Persiana fechada 1.B]] a Kiska falar.
+</tw-passagedata><tw-passagedata pid="2" name="Persiana 1" tags="" position="3643,291" size="100,100">Você está deitad&lt;%=Global.playerGender%&gt; ao lado da janela, e a persiana fechada deixa o quarto ainda mais escuro. Você decide [[&lt;a onclick=&quot;Global.mudarEstado(1,1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana aberta 1.A&quot;&gt;abrir a persiana&lt;/a&gt;-&gt;Persiana aberta 1.A]] ou [[&lt;a onclick=&quot;Global.mudarEstado(-1,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana fechada 1.B&quot;&gt;esperar a Kiska falar&lt;/a&gt;-&gt;Persiana fechada 1.B]].
 
 
 
-</tw-passagedata><tw-passagedata pid="3" name="Persiana aberta 1.A" tags="" position="1726,298" size="100,100">O Jogador abre a persiana para iluminar o quarto e olha para fora. A chuva parou recente pois o chão ainda está molhado, a única fonte de luz vem do celeiro e há duas silhuetas transitando por ali. Na varanda de todas as casas há frascos cheios de um líquido vermelho. 
+</tw-passagedata><tw-passagedata pid="3" name="Persiana aberta 1.A" tags="" position="1726,298" size="100,100">Você abre a persiana para iluminar o quarto e olha para fora. A chuva parou recente pois o chão ainda está molhado, a única fonte de luz vem do celeiro e há duas silhuetas transitando por ali. Na varanda de todas as casas há frascos cheios de um líquido vermelho. A cena te intriga.
 
 J:[[Esse lugar é um pouco assustador de noite.-&gt;Kiska Response A1]]
 
@@ -97,12 +113,11 @@ J:[[Não está mais chovendo mas acabou a luz, que estranho.-&gt;Kiska Response 
 
 J:[[Tá tudo escuro menos o celeiro, será que tem gente lá?-&gt;Kiska Response A2]]
 
-J:[[Não falar nada.-&gt;Kiska Response A3]]</tw-passagedata><tw-passagedata pid="4" name="Persiana fechada 1.B" tags="" position="4639,141" size="100,100">Kiska acende a lanterna do celular, levanta da cama e tenta acender a luz. 
+J:[[Não falar nada.-&gt;Kiska Response A3]]</tw-passagedata><tw-passagedata pid="4" name="Persiana fechada 1.B" tags="" position="4639,139.33333333333334" size="100,100">Kiska acende a lanterna do seu celular, levanta da cama e caminha até o interruptor na tentativa de acender a luz. 
 
 Kiska: É, a luz acabou mesmo. Você pode abrir a janela, por favor?
 
-Jogador [[&lt;a onclick=&quot;Global.mudarEstado(1,2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana aberta 1.B1&quot;&gt;abre a persiana&lt;/a&gt;-&gt;Persiana aberta 1.B1]] ou [[&lt;a onclick=&quot;Global.mudarEstado(-1,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana fechada 1.B2&quot;&gt;não faz nada&lt;/a&gt;-&gt;Persiana fechada 1.B2]].
-</tw-passagedata><tw-passagedata pid="5" name="Kiska Response A3" tags="" position="1917,477" size="100,100">Kiska acende a lanterna do celular.
+Você faz o que a Kiska pediu e [[&lt;a onclick=&quot;Global.mudarEstado(1,2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana aberta 1.B1&quot;&gt;abre a persiana&lt;/a&gt;-&gt;Persiana aberta 1.B1]], ou [[&lt;a onclick=&quot;Global.mudarEstado(-1,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana fechada 1.B2&quot;&gt;ignora o que a ela falou&lt;/a&gt;-&gt;Persiana fechada 1.B2]].</tw-passagedata><tw-passagedata pid="5" name="Kiska Response A3" tags="" position="1917,477" size="100,100">Kiska acende a lanterna do celular dela.
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response B1&quot;&gt;Sua bateria não vai durar muito com a lanterna acesa, quer que eu acenda a vela?&lt;/a&gt;-&gt;Kiska Response B1]]
 
@@ -112,7 +127,7 @@ J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:vo
 
 J:[[Não falar nada-&gt;Kiska Response B3]]</tw-passagedata><tw-passagedata pid="6" name="Kiska Response A1" tags="" position="1492,491" size="100,100">Kiska: Odeio quando acaba a luz.
 
-Kiska acende a lanterna do celular.
+Kiska acende a lanterna do celular dela.
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response B1&quot;&gt;Sua bateria não vai durar muito com a lanterna acesa, quer que eu acenda a vela?&lt;/a&gt;-&gt;Kiska Response B1]]
 
@@ -122,7 +137,7 @@ J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:vo
 
 J:[[Não falar nada-&gt;Kiska Response B3]]</tw-passagedata><tw-passagedata pid="7" name="Kiska Response A2" tags="" position="1704,467" size="100,100">Kiska: Será que não foi o disjuntor? A mulher disse que ele não funciona muito bem.
 
-Kiska acende a lanterna do celular.
+Kiska acende a lanterna do celular dela.
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response B1&quot;&gt;Sua bateria não vai durar muito com a lanterna acesa, quer que eu acenda a vela?&lt;/a&gt;-&gt;Kiska Response B1]]
 
@@ -130,24 +145,27 @@ J:[[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response B2&quot;&gt;Se eu fosse você acenderia uma vela, a lanterna é muito forte.&lt;/a&gt;-&gt;Kiska Response B2]]
 
-J:[[Não falar nada-&gt;Kiska Response B3]]</tw-passagedata><tw-passagedata pid="8" name="Kiska Response B1" tags="" position="1380,843" size="100,100">Kiska: Eu não gosto do escuro, mas prefiro não acender a vela.
+J:[[Não falar nada-&gt;Kiska Response B3]]</tw-passagedata><tw-passagedata pid="8" name="Kiska Response B1" tags="" position="1380,844" size="100,100">Kiska: Eu não gosto do escuro, mas prefiro não acender a vela.
 
-O Jogador levanta da cama e vai até a escrivaninha, onde a vela e o fósforo estão. Ele [[&lt;a onclick=&quot;Global.mudarEstado(-2,-5)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Vela acesa&quot;&gt;acende a vela&lt;/a&gt;-&gt;Vela acesa]] ou [[não faz nada-&gt;Vela apagada]].</tw-passagedata><tw-passagedata pid="9" name="Kiska Response B2" tags="" position="1659,745" size="100,100">Kiska: Mas como não sou você, vou deixar a lanterna acesa.
+Você levanta da cama e caminha um pouco pelo quarto, parando na frente da escrivaninha onde a vela e o fósforo estão. Você [[&lt;a onclick=&quot;Global.mudarEstado(-2,-5)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Vela acesa&quot;&gt;acende a vela&lt;/a&gt;-&gt;Vela acesa]], pois sabe que a Kiska não gosta do escuro ou [[permanece parad&lt;%=Global.playerGender%&gt;-&gt;Vela apagada]] já que ela pediu para que você não acendesse a vela.
 
-O Jogador levanta da cama e vai até a escrivaninha, onde a vela e o fósforo estão. Ele [[&lt;a onclick=&quot;Global.mudarEstado(-2,-5)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Vela acesa&quot;&gt;acende a vela&lt;/a&gt;-&gt;Vela acesa]] ou [[não faz nada-&gt;Vela apagada]].
+
+</tw-passagedata><tw-passagedata pid="9" name="Kiska Response B2" tags="" position="1659,745" size="100,100">Kiska: Mas como não sou você, vou deixar a lanterna acesa.
+
+Você levanta da cama e caminha um pouco pelo quarto, parando na frente da escrivaninha onde a vela e o fósforo estão. Você [[&lt;a onclick=&quot;Global.mudarEstado(-2,-5)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Vela acesa&quot;&gt;acende a vela&lt;/a&gt;-&gt;Vela acesa]], pois sabe que a Kiska não gosta do escuro ou [[permanece parad&lt;%=Global.playerGender%&gt;-&gt;Vela apagada]] já que ela pediu para que você não acendesse a vela.
 
 
 
 </tw-passagedata><tw-passagedata pid="10" name="Kiska Response B3" tags="" position="1892,740" size="100,100">Kiska: Mesmo com a janela aberta fica tão escuro aqui dentro.
 
-O Jogador levanta da cama e vai até a escrivaninha, onde a vela e o fósforo estão. Ele [[&lt;a onclick=&quot;Global.mudarEstado(-2,-5)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Vela acesa&quot;&gt;acende a vela&lt;/a&gt;-&gt;Vela acesa]] ou [[não faz nada-&gt;Vela apagada]].
+Você levanta da cama e caminha um pouco pelo quarto, parando na frente da escrivaninha onde a vela e o fósforo estão. Você [[&lt;a onclick=&quot;Global.mudarEstado(-2,-5)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Vela acesa&quot;&gt;acende a vela&lt;/a&gt;-&gt;Vela acesa]], pois sabe que a Kiska não gosta do escuro ou [[permanece parad&lt;%=Global.playerGender%&gt;-&gt;Vela apagada]] já que ela pediu para que você não acendesse a vela.
 
 
 </tw-passagedata><tw-passagedata pid="11" name="Vela acesa" tags="" position="1392,1100" size="100,100">Kiska levanta da cama e, após alguns passos instáveis, encara a parede por alguns segundos.
 
 KISKA (Clover): Eu falei que não queria que você acendesse a vela.
 
-Kiska anda até o jogador, assopra a vela e guarda o fósforo consigo.
+Kiska anda até você com uma expressão irritada. Ela assopra a vela e pega o fósforo da sua mão, guardando na mochila.
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response C1&quot;&gt;Eu só tava tentando ajudar!&lt;/a&gt;-&gt;Kiska Response C1]]
 
@@ -221,9 +239,7 @@ J: [[&lt;a onclick=&quot;Global.mudarEstado(1,-1)&quot; href=&quot;javascript:vo
 
 J: [[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Vamos tentar não demorar muito pra não ficar sem a lanterna então.&lt;/a&gt;-&gt;Escritório 1]]
 
-J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="20" name="Persiana aberta 1.B1" tags="" position="4564,293" size="100,100">O Jogador abre a persiana para iluminar o quarto e olha para fora. 
-
-A chuva parou recente pois o chão ainda está molhado, a única fonte de luz vem do celeiro e há duas silhuetas transitando por ali. Na varanda de todas as casas há frascos cheios de um líquido vermelho.
+J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="20" name="Persiana aberta 1.B1" tags="" position="4564,294.6666666666667" size="100,100">Após abrir a persiana, iluminando um pouco melhor o quarto, você olha pela janela. A chuva parou recente pois o chão ainda está molhado, a única fonte de luz vem do celeiro e há duas silhuetas transitando por ali. Na varanda de todas as casas há frascos cheios de um líquido vermelho. A cena te intriga. Ainda olhando pela janela, ouve a Kiska falar.
 
 Kiska: Obrigada
 
@@ -233,25 +249,26 @@ J:[[Por nada.-&gt;Kiska Response E1]]
 
 J:[[De nada.-&gt;Kiska Response E1]]
 
-J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response E1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response E1]]</tw-passagedata><tw-passagedata pid="21" name="Persiana fechada 1.B2" tags="" position="5739,955" size="100,100">Kiska: Eu perguntei se você pode abrir a janela...
+J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response E1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response E1]]</tw-passagedata><tw-passagedata pid="21" name="Persiana fechada 1.B2" tags="" position="5740.666666666667,956.6666666666666" size="100,100">Kiska: Eu perguntei se você pode abrir a janela...
 
-Jogador [[&lt;a onclick=&quot;Global.mudarEstado(1,1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana aberta 1.B2.A&quot;&gt;abre a persiana&lt;/a&gt;-&gt;Persiana aberta 1.B2.A]] ou [[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana fechada 1.B2.B&quot;&gt;não faz nada&lt;/a&gt;-&gt;Persiana fechada 1.B2.B]].</tw-passagedata><tw-passagedata pid="22" name="Kiska Response E1" tags="" position="4449,450" size="100,100">O Jogador [[para de olhar pela a janela-&gt;Volta ao escritório 1.B1.A]] ou [[continua olhando-&gt;Janela 1]].</tw-passagedata><tw-passagedata pid="23" name="Volta ao escritório 1.B1.A" tags="" position="3527,565" size="100,100">Kiska suspira e volta pra cama, sentada de frente para a janela. Ela olha para a vela que está em cima da escrivaninha e esfrega o rosto com as mãos. 
+Você [[&lt;a onclick=&quot;Global.mudarEstado(1,1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Olha pela janela&quot;&gt;abre a persiana&lt;/a&gt;-&gt;Olha pela janela]], se questionando como não tinha ouvido a Kiska antes, ou [[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana fechada 1.B2.B&quot;&gt;permanece parad&lt;%=Global.playerGender%&gt;&lt;/a&gt;-&gt;Persiana fechada 1.B2.B]], perdid&lt;%=Global.playerGender%&gt;
+ em seus pensamentos.</tw-passagedata><tw-passagedata pid="22" name="Kiska Response E1" tags="" position="4449,450" size="100,100">Você [[para de olhar pela a janela-&gt;Volta ao escritório 1.B1.A]], ficando de frente para a Kiska ou [[continua olhando-&gt;Janela 1]], intrigad&lt;%=Global.playerGender%&gt; pela imagem da fazenda durante a noite.</tw-passagedata><tw-passagedata pid="23" name="Volta ao escritório 1.B1.A" tags="" position="3527,565" size="100,100">Kiska suspira e volta pra cama, sentada de frente para a janela. Ela olha para a vela que está em cima da escrivaninha e esfrega o rosto com as mãos. Quando ela fala, sua voz sai fraca, como se estivesse nervosa. 
 
-Kiska (Gaguejando um pouco): Será que a gente poderia procurar o disjuntor? Ainda tá bem escuro e eu não gosto muito de velas... Não acho que minha bateria vai durar muito.
+Kiska: Será que a gente poderia procurar o disjuntor? Ainda tá bem escuro e eu não gosto muito de velas... Não acho que minha bateria vai durar muito.
 
-J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Responde F1&quot;&gt;Tem certeza de que não quer acender a vela? Podemos deixar ela no canto, assim não fica muito perto de você.&lt;/a&gt;-&gt;Kiska Responde F1]]
+J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Responde F1&quot;&gt;Tem certeza de que não quer acender a vela? Podemos deixar ela no canto, assim não fica muito perto de você.&lt;/a&gt;-&gt;Kiska Response F1]]
 
-J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Responde F2&quot;&gt;Podemos procurar, mas vamos tentar não demorar muito pra não ficar sem a lanterna então.&lt;/a&gt;-&gt;Kiska Responde F2]]
+J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Responde F2&quot;&gt;Podemos procurar, mas vamos tentar não demorar muito pra não ficar sem a lanterna então.&lt;/a&gt;-&gt;Kiska Response F2]]
 
-J:[[Vamos dar uma olhada por aqui antes, vai que nos ajuda sem precisarmos sair do quarto.-&gt;Kiska Responde F3]]
+J:[[Vamos dar uma olhada por aqui antes, vai que nos ajuda sem precisarmos sair do quarto.-&gt;Kiska Response F3]]
 
-J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Responde F4&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Responde F4]]</tw-passagedata><tw-passagedata pid="24" name="Janela 1" tags="" position="5047,563" size="100,100">J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response H1&quot;&gt;Esse lugar é um pouco assustador de noite.&lt;/a&gt;-&gt;Kiska Response H1]]
+J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Responde F4&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response F4]]</tw-passagedata><tw-passagedata pid="24" name="Janela 1" tags="" position="5047,563" size="100,100">J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response H1&quot;&gt;Esse lugar é um pouco assustador de noite.&lt;/a&gt;-&gt;Kiska Response H1]]
 
 J:[[Não está mais chovendo mas acabou a luz mesmo assim, que estranho.-&gt;Kiska Response H2]]
 
 J:[[Tá tudo escuro menos o celeiro, será que tem gente lá?-&gt;Kiska Response H3]]
 
-J:[[Não falar nada.-&gt;Kiska janela 1]]</tw-passagedata><tw-passagedata pid="25" name="Kiska Responde F1" tags="" position="3056,782" size="100,100">KISKA (Clover): Sim, eu tenho certeza. Não sei você, mas eu vou achar esse disjuntor.
+J:[[Não falar nada.-&gt;Kiska janela 1]]</tw-passagedata><tw-passagedata pid="25" name="Kiska Response F1" tags="" position="3056,782" size="100,100">KISKA (Clover): Sim, eu tenho certeza. Não sei você, mas eu vou achar esse disjuntor.
 
 J:[[Tudo bem, vamos procurar então.-&gt;Escritório 1]]
 
@@ -259,17 +276,17 @@ J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:voi
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;O que for melhor pra você, Kis. Vamos achar esse disjuntor.&lt;/a&gt;-&gt;Escritório 1]]
 
-J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response G1&quot;&gt;Não falar nada&lt;/a&gt;-&gt;Kiska Response G1]]</tw-passagedata><tw-passagedata pid="26" name="Kiska Responde F2" tags="" position="3336,709" size="100,100">Kiska: Vamos Logo.
+J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response G1&quot;&gt;Não falar nada&lt;/a&gt;-&gt;Kiska Response G1]]</tw-passagedata><tw-passagedata pid="26" name="Kiska Response F2" tags="" position="3336,709" size="100,100">Kiska: Vamos Logo.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="27" name="Kiska Responde F3" tags="" position="3623,775" size="100,100">Kiska: É uma boa ideia.
+[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="27" name="Kiska Response F3" tags="" position="3624.6666666666665,775" size="100,100">Kiska: É uma boa ideia.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="28" name="Kiska Responde F4" tags="" position="3855,849" size="100,100">Kiska (Clover):Legal, pode me ignorar mesmo. Eu vou achar esse disjuntor porque não quero ficar no escuro num lugar desconhecido.
+[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="28" name="Kiska Response F4" tags="" position="3855,849" size="100,100">Kiska (Clover):Legal, pode me ignorar mesmo. Eu vou achar esse disjuntor porque não quero ficar no escuro num lugar desconhecido.
 
-J:[[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Me desculpe Kiska, estava distraído. Vou te ajudar.&lt;/a&gt;-&gt;Escritório 1]]
+J:[[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Me desculpe Kiska, estava distraíd&lt;%=Global.playerGender%&gt;. Vou te ajudar.&lt;/a&gt;-&gt;Escritório 1]]
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Desculpa, vamos procurar o disjuntor.&lt;/a&gt;-&gt;Escritório 1]]
 
-J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Não estava te ignorando, estava distraído. Vou te ajudar com o disjuntor.&lt;/a&gt;-&gt;Escritório 1]]
+J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Não estava te ignorando, estava distraíd&lt;%=Global.playerGender%&gt;. Vou te ajudar com o disjuntor.&lt;/a&gt;-&gt;Escritório 1]]
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response G1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response G1]]</tw-passagedata><tw-passagedata pid="29" name="Kiska Response G1" tags="" position="3374,920" size="100,100">Kiska (Clover): Que seja.
 
@@ -292,33 +309,40 @@ J: [[Não sei porque precisariam estar lá depois de anoitecer. Me parece estran
 
 J: [[O que alguém estaria fazendo num celeiro durante a madrugada?-&gt;Kiska janela 1]]
 
-J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska janela 1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska janela 1]]</tw-passagedata><tw-passagedata pid="33" name="Kiska janela 1" tags="" position="4780,1135" size="100,100">Kiska (Gaguejando um pouco): Será que a gente poderia procurar o disjuntor? Ainda tá bem escuro e eu não gosto muito de velas... Não acho que minha bateria vai durar muito...
+J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska janela 1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska janela 1]]</tw-passagedata><tw-passagedata pid="33" name="Kiska janela 1" tags="" position="4781.666666666667,1136.6666666666667" size="100,100">Kiska: Será que a gente poderia procurar o disjuntor? Ainda tá bem escuro e eu não gosto muito de velas... Não acho que minha bateria vai durar muito...
 
-[[Evento timed-&gt;Kiska janela 2]]</tw-passagedata><tw-passagedata pid="34" name="Kiska janela 2" tags="" position="4784,1300" size="100,100">Kiska (Clover): Você tá me ouvindo?
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Kiska janela 2&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="34" name="Kiska janela 2" tags="" position="4784,1300" size="100,100">Kiska pergunta com a voz fraca, como se estivesse nervosa.
 
-O Jogador [[para de olhar-&gt;Volta ao escritório 1.B1.B]] pela janela.</tw-passagedata><tw-passagedata pid="35" name="Volta ao escritório 1.B1.B" tags="" position="4764,1480" size="100,100">J: [[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response I1&quot;&gt;Sim, desculpa. Vamos procurar o disjuntor então, quero ver se acho algo estranho no caminho.&lt;/a&gt;-&gt;Kiska Response I1]]
+Kiska (Clover): Você tá me ouvindo?
+
+Com a Kiska chamando sua atenção, você [[para de olhar-&gt;Volta ao escritório 1.B1.B]] pela janela e volta sua atenção à ela.</tw-passagedata><tw-passagedata pid="35" name="Volta ao escritório 1.B1.B" tags="" position="4764,1480" size="100,100">J: [[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response I1&quot;&gt;Sim, desculpa. Vamos procurar o disjuntor então, quero ver se acho algo estranho no caminho.&lt;/a&gt;-&gt;Kiska Response I1]]
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(1,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response I2&quot;&gt;Aham, desculpa. Então vamos logo antes que a bateria dos celulares acabem.&lt;/a&gt;-&gt;Kiska Response I2]]
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response I3&quot;&gt;Vamos dar uma olhada por aqui antes, vai que nos dá alguma pista.&lt;/a&gt;-&gt;Kiska Response I3]]
 
-J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Responde F4&quot;&gt;Não falar nada&lt;/a&gt;-&gt;Kiska Responde F4]]</tw-passagedata><tw-passagedata pid="36" name="Kiska Response I1" tags="" position="4164,1201" size="100,100">Kiska: Vamos.
+J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Responde F4&quot;&gt;Não falar nada&lt;/a&gt;-&gt;Kiska Response F4]]</tw-passagedata><tw-passagedata pid="36" name="Kiska Response I1" tags="" position="4052.6666666666665,1072.6666666666665" size="100,100">Kiska: Vamos.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="37" name="Kiska Response I2" tags="" position="4121,1038" size="100,100">Kiska: Para com isso de que tem algo estranho. Vamos logo.
+[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="37" name="Kiska Response I2" tags="" position="4169.333333333333,1199.6666666666667" size="100,100">Kiska: Para com isso de que tem algo estranho. Vamos logo.
 
 [[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="38" name="Kiska Response I3" tags="" position="4234,1361" size="100,100">Kiska: ... Ok.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="39" name="Persiana aberta 1.B2.A" tags="" position="5521,1096" size="100,100">O Jogador abre a persiana para iluminar o quarto e olha para fora. 
+[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="39" name="Persiana aberta 1.B2.A" tags="" position="5296,1119.3333333333333" size="100,100">A chuva parou recente pois o chão ainda está molhado, a única fonte de luz vem do celeiro e há duas silhuetas transitando por ali. Na varanda de todas as casas há frascos cheios de um líquido vermelho. A cena te intriga.
 
-A chuva parou recente pois o chão ainda está molhado, a única fonte de luz vem do celeiro e há duas silhuetas transitando por ali. Na varanda de todas as casas há frascos cheios de um líquido vermelho. 
+J:[[Desculpa.-&gt;Kiska Response J1]]
 
-J:[[Desculpa-&gt;Kiska Response J1]]
+J:[[Foi mal.-&gt;Kiska Response J1]]
 
-J:[[Foi mal-&gt;Kiska Response J1]]
+J:[[Pronto.-&gt;Kiska Response J1]]
 
-J:[[Pronto-&gt;Kiska Response J1]]
-
-J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response J2&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response J2]]</tw-passagedata><tw-passagedata pid="40" name="Persiana fechada 1.B2.B" tags="" position="5956,1093" size="100,100">Kiska: Obrigada, Jogador. Adoro ser ignorada.
+J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response J2&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response J2]]</tw-passagedata><tw-passagedata pid="40" name="Persiana fechada 1.B2.B" tags="" position="5956,1093" size="100,100">Kiska: Obrigada, &lt;%=Global.playerName%&gt;. Adoro ser ignorada.
 
 J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response K1&quot;&gt;O que?&lt;/a&gt;-&gt;Kiska Response K1]]
 
@@ -326,7 +350,7 @@ J: [[Hã? Desculpa.-&gt;Kiska Response K1]]
 
 J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response K1&quot;&gt;Falou comigo?&lt;/a&gt;-&gt;Kiska Response K1]]
 
-J: [[&lt;a onclick=&quot;Global.mudarEstado(-3,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response K1&quot;&gt;Não falar nada&lt;/a&gt;-&gt;Kiska Response K1]]</tw-passagedata><tw-passagedata pid="41" name="Kiska Response J1" tags="" position="5278,1240" size="100,100">Kiska: Ok.
+J: [[&lt;a onclick=&quot;Global.mudarEstado(-3,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response K1&quot;&gt;Não falar nada&lt;/a&gt;-&gt;Kiska Response K1]]</tw-passagedata><tw-passagedata pid="41" name="Kiska Response J1" tags="" position="5068,1265" size="100,100">Kiska: Ok.
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response J2&quot;&gt;Esse lugar é um pouco assustador de noite.&lt;/a&gt;-&gt;Kiska Response J2]]
 
@@ -334,13 +358,13 @@ J:[[Não está mais chovendo mas acabou a luz mesmo assim, que estranho.-&gt;Kis
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response J2&quot;&gt;Tá tudo escuro menos o celeiro, será que tem gente lá?&lt;/a&gt;-&gt;Kiska Response J2]] 
 
-J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response J2&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response J2]]</tw-passagedata><tw-passagedata pid="42" name="Kiska Response J2" tags="" position="5448,1552" size="100,100">Kiska suspira e volta pra cama, sentada de frente para a janela. Ela olha para a vela que está em cima da escrivaninha e esfrega o rosto com as mãos. 
+J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response J2&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response J2]]</tw-passagedata><tw-passagedata pid="42" name="Kiska Response J2" tags="" position="5444.666666666667,1545.3333333333333" size="100,100">Kiska suspira e volta pra cama, sentada de frente para a janela. Ela olha para a vela que está em cima da escrivaninha e esfrega o rosto com as mãos. 
 
 Kiska (Clover): Eu vou procurar o disjuntor. Não quero ficar no escuro aqui.
 
 J: [[Deixa eu te ajudar.-&gt;Escritório 1]]
 
-J: [[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Pera aí, vamos juntos.&lt;/a&gt;-&gt;Escritório 1]]
+J: [[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Pera aí, vamos junt&lt;%=Global.playerGender%&gt;s.&lt;/a&gt;-&gt;Escritório 1]]
 
 J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Não sei se vai adiantar muito.&lt;/a&gt;-&gt;Escritório 1]]
 
@@ -356,7 +380,7 @@ Kiska (Clover): Eu vou procurar a porcaria do disjuntor.
 
 [[Coloca novamente no gancho.-&gt;Escritório 2]]</tw-passagedata><tw-passagedata pid="48" name="Estante 2" tags="" position="3926,2713" size="100,100">[[Tira foto da lista-&gt;Escritório 2]] ou [[guarda a lista no lugar dela-&gt;Escritório 2]].</tw-passagedata><tw-passagedata pid="49" name="Escritório 2" tags="" position="3004,2588" size="200,200">Kiska: Não parece ter nada de interessante aqui, vou ver lá fora.
 
-Kiska anda até a sua mochila e a coloca nas costas antes de sair do escritório. O Jogador [[segue a Kiska-&gt;CENA 2]] ou [[investiga um pouco mais.-&gt;Escritório 3]]</tw-passagedata><tw-passagedata pid="50" name="CENA 2" tags="" position="3467.333333333333,3199.3333333333335" size="200,200">O corredor é escuro e vazio. Há uma mesa de centro ao lado da porta do escritório, uma grande estante com armários na parte debaixo e vários documentos e livros nas prateleiras. Ao lado está um vaso de plantas grande e uma porta. Do lado oposto do corredor está a porta de entrada, seguido por um cabideiro, um porta sapatos e um quadro antigo na parede. Tudo está empoeirado, como se o local estivesse inutilizado por alguns anos.
+Kiska anda até a sua mochila e a coloca nas costas antes de sair do escritório. O Jogador [[segue a Kiska-&gt;CENA 2]] ou [[investiga um pouco mais.-&gt;Escritório 3]]</tw-passagedata><tw-passagedata pid="50" name="CENA 2" tags="" position="3467,3201" size="200,200">O corredor é escuro e vazio. Há uma mesa de centro ao lado da porta do escritório, uma grande estante com armários na parte debaixo e vários documentos e livros nas prateleiras. Ao lado está um vaso de plantas grande e uma porta. Do lado oposto do corredor está a porta de entrada, seguido por um cabideiro, um porta sapatos e um quadro antigo na parede. Tudo está empoeirado, como se o local estivesse inutilizado por alguns anos.
 
 &lt;%  if (Global.amizade &gt;= 50)  { %&gt;
 
@@ -389,7 +413,7 @@ J: [[Não falar nada-&gt;Investigar 2.B]]
 
 [[Tira o telefone do gancho.-&gt;Telefone]]
 
-[[Seguir a Kiska e ir para o corredor, sem fechar a porta do escritório-&gt;CENA 2]]</tw-passagedata><tw-passagedata pid="52" name="Investigar 2.A" tags="" position="1227,3925.3333333333335" size="100,100">&lt;%Global.visited++%&gt;
+[[Seguir a Kiska e ir para o corredor, sem fechar a porta do escritório-&gt;CENA 2]]</tw-passagedata><tw-passagedata pid="52" name="Investigar 2.A" tags="" position="1227,3925" size="100,100">&lt;%Global.visited++%&gt;
 
 &lt;% if (Global.visited &lt; 5) { %&gt;
 
@@ -421,15 +445,15 @@ Kiska abre uma das portas do armário e folheia os arquivos. O Jogador:
 &lt;%}%&gt;
 
 
-&lt;%if (Global.armarioVisited == true) {%&gt;
+&lt;%if (Global.armario1Visited == true) {%&gt;
 
 &lt;span class = &quot;inactive&quot;&gt;
-[[Abre as portas do armário.-&gt;Armário]]
+[[Abre as portas do armário.-&gt;Armário 1]]
 &lt;/span&gt;
 
 &lt;%} else {%&gt;
 
-[[Abre as portas do armário.-&gt;Armário]]
+[[Abre as portas do armário.-&gt;Armário 1]]
 
 &lt;%}%&gt;
 
@@ -447,15 +471,15 @@ Kiska abre uma das portas do armário e folheia os arquivos. O Jogador:
 &lt;%}%&gt;
 
 
-&lt;%if (Global.fotoVisited  == true) {%&gt;
+&lt;%if (Global.foto1Visited  == true) {%&gt;
 
 &lt;span class = &quot;inactive&quot;&gt;
-[[Procura entre as pastas na estante.-&gt;Foto]]
+[[Procura entre as pastas na estante.-&gt;Foto 1]]
 &lt;/span&gt;
 
 &lt;%} else {%&gt;
 
-[[Procura entre as pastas na estante.-&gt;Foto]]
+[[Procura entre as pastas na estante.-&gt;Foto 1]]
 
 &lt;%}%&gt;
 
@@ -498,7 +522,7 @@ J: [[Não falar nada-&gt;Kiska Response T4]]
 
 [[Evento timed-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="54" name="Kiska Response L2" tags="" position="911,3549" size="100,100">Kiska (Clover): As pessoas não precisam de um motivo concreto pra trancar um quarto.
 
-[[Evento timed-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="55" name="Kiska Response L3" tags="" position="1191,3588" size="100,100">Kiska (Clover): É por isso que estamos procurando.
+[[Evento timed-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="55" name="Kiska Response L3" tags="" position="1192,3588" size="100,100">Kiska (Clover): É por isso que estamos procurando.
 
 [[Evento timed-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="56" name="Investiga 2.A-1" tags="" position="396,3815" size="100,100">&lt;%
 Global.investiga2a1Visited = true;
@@ -518,8 +542,8 @@ J:[[Parece que trancaram a gente aqui.-&gt;Kiska Response M1]]
 
 J:[[Acho que estamos presos aqui.-&gt;Kiska Response M1]]
 
-J:[[Não falar nada-&gt;Kiska Response M1]]</tw-passagedata><tw-passagedata pid="58" name="Armário" tags="" position="356,4581" size="100,100">&lt;%
-Global.armarioVisited = true;
+J:[[Não falar nada-&gt;Kiska Response M1]]</tw-passagedata><tw-passagedata pid="58" name="Armário 1" tags="" position="356,4581" size="100,100">&lt;%
+Global.armario1Visited = true;
 %&gt;
 
 J: [[Parece que o dono dessa casa fala russo-&gt;Kiska Response N1]]
@@ -528,7 +552,7 @@ J: [[Tem tantos papéis em outra língua, será que o dono dessa casa é estrang
 
 J: [[Acho que um russo morou aqui.-&gt;Kiska Response N1]]
 
-J: [[Não falar nada.-&gt;Kiska Response N1]]</tw-passagedata><tw-passagedata pid="59" name="Investiga 2.A-5" tags="" position="794,4798" size="100,100">&lt;%
+J: [[Não falar nada.-&gt;Kiska Response N1]]</tw-passagedata><tw-passagedata pid="59" name="Investiga 2.A-5" tags="" position="897,4798" size="100,100">&lt;%
 Global.investiga2a5Visited = true;
 %&gt;
 
@@ -539,8 +563,8 @@ J: [[A pessoa que morava aqui parece bem inteligente.-&gt;Investigar 2.A]]
 J: [[Esses livros são meio estranhos.-&gt;Investigar 2.A]]
 
 J: [[Não falar nada.-&gt;Investigar 2.A]]
-</tw-passagedata><tw-passagedata pid="60" name="Foto" tags="" position="1512,4879" size="100,100">&lt;%
-Global.fotoVisited = true;
+</tw-passagedata><tw-passagedata pid="60" name="Foto 1" tags="" position="1512,4880" size="100,100">&lt;%
+Global.foto1Visited = true;
 %&gt;
 
 Uma foto.
@@ -569,7 +593,7 @@ J:[[Problema resolvido, achei a chave!-&gt;Kiska Response S2]]
 
 J:[[Ok, agora quem em sã consciência guarda uma chave num vaso de planta dentro da própria casa? Ela tava escondida, isso você não pode negar.-&gt;Kiska Response S3]]
 
-J:[[Não falar nada.-&gt;Abrir porta]]</tw-passagedata><tw-passagedata pid="63" name="Kiska Response M1" tags="" position="296,4361" size="100,100">Kiska (Clover): Eu não deixaria a porta da minha casa aberta.
+J:[[Não falar nada.-&gt;Abrir porta 1]]</tw-passagedata><tw-passagedata pid="63" name="Kiska Response M1" tags="" position="296,4361" size="100,100">Kiska (Clover): Eu não deixaria a porta da minha casa aberta.
 
 [[Voltar-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="64" name="Kiska Response N1" tags="" position="356,4731" size="100,100">Kiska (Clover): Parece que que ninguém mora aqui faz um tempo. Ele deve ter morrido já.
 
@@ -579,11 +603,11 @@ J: [[Esses documentos são meio suspeitos. Você poderia guardar na sua mochila,
 
 J: [[Posso guardar um negócio na sua mochila?-&gt;Kiska Response O3]]
 
-J: [[Não falar nada-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="65" name="Kiska Response O1" tags="" position="440,5056" size="100,100">Kiska (Clover): Não sei se é uma boa ideia.
+J: [[Não falar nada-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="65" name="Kiska Response O1" tags="" position="471,4997" size="100,100">Kiska (Clover): Não sei se é uma boa ideia.
 
-O Jogador [[guarda na mochila-&gt;Investigar 2.A]] da Kiska alguns dos documentos que achou na estante ou [[coloca de volta no lugar-&gt;Investigar 2.A]]. </tw-passagedata><tw-passagedata pid="66" name="Kiska Response O2" tags="" position="440,5056" size="100,100">Kiska (Clover): Para com isso, não tem nada de suspeito.
+O Jogador [[guarda na mochila-&gt;Investigar 2.A]] da Kiska alguns dos documentos que achou na estante ou [[coloca de volta no lugar-&gt;Investigar 2.A]]. </tw-passagedata><tw-passagedata pid="66" name="Kiska Response O2" tags="" position="641,4954" size="100,100">Kiska (Clover): Para com isso, não tem nada de suspeito.
 
-O Jogador [[guarda na mochila-&gt;Investigar 2.A]] da Kiska alguns dos documentos que achou na estante ou [[coloca de volta no lugar-&gt;Investigar 2.A]]. </tw-passagedata><tw-passagedata pid="67" name="Kiska Response O3" tags="" position="440,5051" size="100,100">Kiska (Clover): Pode.
+O Jogador [[guarda na mochila-&gt;Investigar 2.A]] da Kiska alguns dos documentos que achou na estante ou [[coloca de volta no lugar-&gt;Investigar 2.A]]. </tw-passagedata><tw-passagedata pid="67" name="Kiska Response O3" tags="" position="776,4904" size="100,100">Kiska (Clover): Pode.
 
 O Jogador [[guarda na mochila-&gt;Investigar 2.A]] da Kiska alguns dos documentos que achou na estante ou [[coloca de volta no lugar-&gt;Investigar 2.A]]. </tw-passagedata><tw-passagedata pid="68" name="Kiska Response P1" tags="" position="1204,5157" size="100,100">Kiska (Clover): O dono da casa, talvez.
 
@@ -613,53 +637,51 @@ O Jogador [[guarda na mochila-&gt;Investigar 2.A]] da Kiska a foto ou [[coloca d
 
 [[Voltar-&gt;Investigar 2.A]] </tw-passagedata><tw-passagedata pid="79" name="Kiska Response S1" tags="" position="2375,3847" size="100,100">Kiska (Clover): Ótimo, vamos achar esse disjuntor logo.
 
-J: [[Ok, pera aí. Deixa eu ver se essa chave é daqui mesmo.-&gt;Abrir porta]]
+J: [[Ok, pera aí. Deixa eu ver se essa chave é daqui mesmo.-&gt;Abrir porta 1]]
 
-J: [[Vou conferir se achamos a chave certa.-&gt;Abrir porta]]
+J: [[Vou conferir se achamos a chave certa.-&gt;Abrir porta 1]]
 
-J: [[Deixa eu testar. Vai que achamos a chave errada, a porta da frente também tá trancada.-&gt;Abrir porta]]
+J: [[Deixa eu testar. Vai que achamos a chave errada, a porta da frente também tá trancada.-&gt;Abrir porta 1]]
 
-J: [[Não falar nada.-&gt;Abrir porta]]</tw-passagedata><tw-passagedata pid="80" name="Kiska Response S2" tags="" position="2375,4102" size="100,100">Kiska (Clover): Achou? Vamos logo dar um jeito nesse disjuntor.
+J: [[Não falar nada.-&gt;Abrir porta 1]]</tw-passagedata><tw-passagedata pid="80" name="Kiska Response S2" tags="" position="2375,4102" size="100,100">Kiska (Clover): Achou? Vamos logo dar um jeito nesse disjuntor.
 
-J: [[Ok, pera aí. Deixa eu ver se essa chave é daqui mesmo.-&gt;Abrir porta]]
+J: [[Ok, pera aí. Deixa eu ver se essa chave é daqui mesmo.-&gt;Abrir porta 1]]
 
-J: [[Vou conferir se achamos a chave certa.-&gt;Abrir porta]]
+J: [[Vou conferir se achamos a chave certa.-&gt;Abrir porta 1]]
 
-J: [[Deixa eu testar. Vai que achamos a chave errada, a porta da frente também tá trancada.-&gt;Abrir porta]]
+J: [[Deixa eu testar. Vai que achamos a chave errada, a porta da frente também tá trancada.-&gt;Abrir porta 1]]
 
-J: [[Não falar nada.-&gt;Abrir porta]]</tw-passagedata><tw-passagedata pid="81" name="Kiska Response S3" tags="" position="2367,4285" size="100,100">Kiska (Clover): Ok, isso é definitivamente estranho. Mas vamos logo ligar o disjuntor.
+J: [[Não falar nada.-&gt;Abrir porta 1]]</tw-passagedata><tw-passagedata pid="81" name="Kiska Response S3" tags="" position="2367,4285" size="100,100">Kiska (Clover): Ok, isso é definitivamente estranho. Mas vamos logo ligar o disjuntor.
 
-J: [[Ok, pera aí. Deixa eu ver se essa chave é daqui mesmo.-&gt;Abrir porta]]
+J: [[Ok, pera aí. Deixa eu ver se essa chave é daqui mesmo.-&gt;Abrir porta 1]]
 
-J: [[Vou conferir se achamos a chave certa.-&gt;Abrir porta]]
+J: [[Vou conferir se achamos a chave certa.-&gt;Abrir porta 1]]
 
-J: [[Deixa eu testar. Vai que achamos a chave errada, a porta da frente também tá trancada.-&gt;Abrir porta]]
+J: [[Deixa eu testar. Vai que achamos a chave errada, a porta da frente também tá trancada.-&gt;Abrir porta 1]]
 
-J: [[Não falar nada.-&gt;Abrir porta]]</tw-passagedata><tw-passagedata pid="82" name="Abrir porta" tags="" position="2637,4117" size="100,100">O Jogador anda até a porta e, com a chave na mão, a [[destranca-&gt;CENA 3]]. </tw-passagedata><tw-passagedata pid="83" name="CENA 3" tags="" position="3437,4715" size="200,200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="84" name="Kiska Response T1" tags="" position="3170.3333333333335,3547.0000000000005" size="100,100">Kiska (Clover): Calma.
+J: [[Não falar nada.-&gt;Abrir porta 1]]</tw-passagedata><tw-passagedata pid="82" name="Abrir porta 1" tags="" position="2637,4117" size="100,100">O Jogador anda até a porta e, com a chave na mão, a [[destranca-&gt;CENA 3]]. </tw-passagedata><tw-passagedata pid="83" name="CENA 3" tags="" position="3561,5935" size="200,200">O quarto está extremamente escuro, sem um pingo de iluminação natural e a lanterna do celular se mostra insuficiente para iluminar o local.
 
-Com um CLIQUE Kiska consegue destrancar a porta. Ela fica de pé e apoia as mãos na cintura, orgulhosa.
+&lt;%  if (Global.amizade &gt;= 50)  { %&gt;
 
-Kiska (Clover): Sabia que podia dar certo. Vamos lá.
+J: [[Kiska, tem certeza que quer entrar? Tá bem escuro aqui.-&gt;Kiska Response ZE1]]
 
-J: [[Boa!-&gt;Kiska abre porta 1]]
+J: [[Acho melhor eu entrar sozinho pra procurar o disjuntor.-&gt;Kiska Response ZE2]]
 
-J: [[Nem acredito que deu certo.-&gt;Kiska abre porta 1]]
+J: [[Se eu fosse você ficava aí no corredor, aqui tá escuro demais.-&gt;Kiska Response ZE3]]
 
-J: [[Cada dia aprendendo algo novo sobre você.-&gt;Kiska abre porta 1]]
+J: [[Não falar nada.-&gt;Kiska Response ZE4]]
 
-J: [[Não falar nada.-&gt;Kiska abre porta 1]]</tw-passagedata><tw-passagedata pid="85" name="Kiska Response T2" tags="" position="3018.666666666667,3630.333333333333" size="100,100">Kiska (Clover): Talvez.
+&lt;% }  else {  %&gt;
 
-Com um CLIQUE Kiska consegue destrancar a porta. Ela fica de pé e apoia as mãos na cintura, orgulhosa.
+J: [[Kiska, tem certeza que quer entrar? Tá bem escuro aqui.-&gt;Kiska Response ZF1]]
 
-Kiska (Clover): Sabia que podia dar certo. Vamos lá.
+J: [[Acho melhor eu entrar sozinho pra procurar o disjuntor.-&gt;Kiska Response ZF2]]
 
-J: [[Boa!-&gt;Kiska abre porta 1]]
+J: [[Se eu fosse você ficava aí no corredor, aqui tá escuro demais.-&gt;Kiska Response ZF3]]
 
-J: [[Nem acredito que deu certo.-&gt;Kiska abre porta 1]]
+J: [[Não falar nada.-&gt;Kiska Response ZF4]]
 
-J: [[Cada dia aprendendo algo novo sobre você.-&gt;Kiska abre porta 1]]
-
-J: [[Não falar nada.-&gt;Kiska abre porta 1]]</tw-passagedata><tw-passagedata pid="86" name="Kiska Response T3" tags="" position="2810.3333333333335,3698.6666666666674" size="100,100">Kiska (Clover): Não, nas portas de casa não dá certo. 
+&lt;% }  %&gt;</tw-passagedata><tw-passagedata pid="84" name="Kiska Response T1" tags="" position="3170,3547" size="100,100">Kiska (Clover): Calma.
 
 Com um CLIQUE Kiska consegue destrancar a porta. Ela fica de pé e apoia as mãos na cintura, orgulhosa.
 
@@ -671,11 +693,35 @@ J: [[Nem acredito que deu certo.-&gt;Kiska abre porta 1]]
 
 J: [[Cada dia aprendendo algo novo sobre você.-&gt;Kiska abre porta 1]]
 
-J: [[Não falar nada.-&gt;Kiska abre porta 1]]</tw-passagedata><tw-passagedata pid="87" name="Kiska abre porta 1" tags="" position="3222.0000000000005,4011.666666666667" size="100,100">A Kiska abre a porta e faz um gesto para o Jogador ir na frente.
+J: [[Não falar nada.-&gt;Kiska abre porta 1]]</tw-passagedata><tw-passagedata pid="85" name="Kiska Response T2" tags="" position="3018,3630" size="100,100">Kiska (Clover): Talvez.
+
+Com um CLIQUE Kiska consegue destrancar a porta. Ela fica de pé e apoia as mãos na cintura, orgulhosa.
+
+Kiska (Clover): Sabia que podia dar certo. Vamos lá.
+
+J: [[Boa!-&gt;Kiska abre porta 1]]
+
+J: [[Nem acredito que deu certo.-&gt;Kiska abre porta 1]]
+
+J: [[Cada dia aprendendo algo novo sobre você.-&gt;Kiska abre porta 1]]
+
+J: [[Não falar nada.-&gt;Kiska abre porta 1]]</tw-passagedata><tw-passagedata pid="86" name="Kiska Response T3" tags="" position="2810,3698" size="100,100">Kiska (Clover): Não, nas portas de casa não dá certo. 
+
+Com um CLIQUE Kiska consegue destrancar a porta. Ela fica de pé e apoia as mãos na cintura, orgulhosa.
+
+Kiska (Clover): Sabia que podia dar certo. Vamos lá.
+
+J: [[Boa!-&gt;Kiska abre porta 1]]
+
+J: [[Nem acredito que deu certo.-&gt;Kiska abre porta 1]]
+
+J: [[Cada dia aprendendo algo novo sobre você.-&gt;Kiska abre porta 1]]
+
+J: [[Não falar nada.-&gt;Kiska abre porta 1]]</tw-passagedata><tw-passagedata pid="87" name="Kiska abre porta 1" tags="" position="3010,4215" size="100,100">A Kiska abre a porta e faz um gesto para o Jogador ir na frente.
 
 Kiska (Clover): Depois de você.
 
-O Jogador [[passa pela porta-&gt;CENA 3]].</tw-passagedata><tw-passagedata pid="88" name="Kiska Response T4" tags="" position="2718.666666666667,3837.0000000000005" size="100,100">Com um CLIQUE Kiska consegue destrancar a porta. Ela fica de pé e apoia as mãos na cintura, orgulhosa.
+O Jogador [[passa pela porta-&gt;CENA 3]].</tw-passagedata><tw-passagedata pid="88" name="Kiska Response T4" tags="" position="2718,3837" size="100,100">Com um CLIQUE Kiska consegue destrancar a porta. Ela fica de pé e apoia as mãos na cintura, orgulhosa.
 
 Kiska (Clover): Sabia que podia dar certo. Vamos lá.
 
@@ -685,5 +731,470 @@ J: [[Nem acredito que deu certo.-&gt;Kiska abre porta 1]]
 
 J: [[Cada dia aprendendo algo novo sobre você.-&gt;Kiska abre porta 1]]
 
-J: [[Não falar nada.-&gt;Kiska abre porta 1]]</tw-passagedata><tw-passagedata pid="89" name="Kiska Response U1" tags="" position="5587,3536.3333333333335" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="90" name="Kiska Response U2" tags="" position="5838.666666666666,3531.3333333333335" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="91" name="Kiska Response U3" tags="" position="6107,3538" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="92" name="Investigar 2.B" tags="" position="5768.666666666666,3929.6666666666665" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+J: [[Não falar nada.-&gt;Kiska abre porta 1]]</tw-passagedata><tw-passagedata pid="89" name="Kiska Response U1" tags="" position="6188,3544" size="100,100">Kiska (Clover): É por isso que estamos procurando, pra descobrir.
+
+[[Evento timed-&gt;Investigar 2.B]]</tw-passagedata><tw-passagedata pid="90" name="Kiska Response U2" tags="" position="6438,3539" size="100,100">Kiska (Clover): As pessoas não precisam de um motivo concreto pra trancar um quarto.
+
+[[Evento timed-&gt;Investigar 2.B]]</tw-passagedata><tw-passagedata pid="91" name="Kiska Response U3" tags="" position="6707,3546" size="100,100">Kiska (Clover): Se eu soubesse não estaria procurando.
+
+[[Evento timed-&gt;Investigar 2.B]]</tw-passagedata><tw-passagedata pid="92" name="Investigar 2.B" tags="" position="6368,3937" size="100,100">&lt;%Global.visited++%&gt;
+
+&lt;% if (Global.visited &lt; 5) { %&gt;
+
+Kiska abre uma das portas do armário e folheia os arquivos. O Jogador:
+
+&lt;%if (Global.investiga2b1Visited == true) {%&gt;
+
+&lt;span class = &quot;inactive&quot;&gt;
+[[Tenta abrir a porta do quarto.-&gt;Investiga 2.B-1]]
+&lt;/span&gt;
+
+&lt;%} else {%&gt;
+
+[[Tenta abrir a porta do quarto.-&gt;Investiga 2.B-1]]
+
+&lt;%}%&gt;
+
+
+&lt;%if (Global.investiga2b2Visited == true) {%&gt;
+
+&lt;span class = &quot;inactive&quot;&gt;
+[[Tenta abrir a porta da frente.-&gt;Investiga 2.B-2]]
+&lt;/span&gt;
+
+&lt;%} else {%&gt;
+
+[[Tenta abrir a porta da frente.-&gt;Investiga 2.B-2]]
+
+&lt;%}%&gt;
+
+
+&lt;%if (Global.armario2Visited == true) {%&gt;
+
+&lt;span class = &quot;inactive&quot;&gt;
+[[Abre as portas do armário.-&gt;Armário 2]]
+&lt;/span&gt;
+
+&lt;%} else {%&gt;
+
+[[Abre as portas do armário.-&gt;Armário 2]]
+
+&lt;%}%&gt;
+
+
+&lt;%if (Global.investiga2b5Visited == true) {%&gt;
+
+&lt;span class = &quot;inactive&quot;&gt;
+[[Procura atrás dos livros da estante.-&gt;Investiga 2.B-5]]
+&lt;/span&gt;
+
+&lt;%} else {%&gt;
+
+[[Procura atrás dos livros da estante.-&gt;Investiga 2.B-5]]
+
+&lt;%}%&gt;
+
+
+&lt;%if (Global.foto2Visited  == true) {%&gt;
+
+&lt;span class = &quot;inactive&quot;&gt;
+[[Procura entre as pastas na estante.-&gt;Foto 2]]
+&lt;/span&gt;
+
+&lt;%} else {%&gt;
+
+[[Procura entre as pastas na estante.-&gt;Foto 2]]
+
+&lt;%}%&gt;
+
+
+&lt;%if (Global.investiga2b8visited == true) {%&gt;
+
+&lt;span class = &quot;inactive&quot;&gt;
+[[Procura atrás do quadro.-&gt;Investiga 2.B-8]]
+&lt;/span&gt;
+
+&lt;%} else {%&gt;
+
+[[Procura atrás do quadro.-&gt;Investiga 2.B-8]]
+
+&lt;%}%&gt;
+
+[[Procura atrás do vaso de planta.-&gt;Investiga 2.B-9]]
+
+
+&lt;%} else {%&gt;
+
+Kiska se afasta da estante e anda até a porta. Ela agacha, apoia a mochila no chão e tira um grampo de cabelo de sua trança. 
+
+
+J: [[O que você tá fazendo?-&gt;Kiska Response ZC1]]
+
+J: [[Você sabe abrir portas com um grampo e só decidiu tentar agora?-&gt;Kiska Response ZC1]]
+
+J: [[Por que você nunca me contou que sabe abrir portas assim?-&gt;Kiska Response ZC1]]
+
+J: [[Não falar nada.-&gt;Kiska Response ZC4]]
+
+
+
+&lt;%}%&gt;</tw-passagedata><tw-passagedata pid="93" name="Investiga 2.B-1" tags="" position="7581,3689" size="100,100">&lt;%
+Global.investiga2b1Visited = true;
+%&gt;
+
+Está Trancada.
+
+[[Voltar-&gt;Investigar 2.B]]</tw-passagedata><tw-passagedata pid="94" name="Investiga 2.B-2" tags="" position="7683,3980" size="100,100">&lt;%
+Global.investiga2b2Visited = true;
+%&gt;
+
+Está trancada.
+
+J:[[A porta da frente tá trancada.-&gt;Kiska Response V1]]
+
+J:[[Parece que trancaram a gente aqui.-&gt;Kiska Response V1]]
+
+J:[[Acho que estamos presos aqui.-&gt;Kiska Response V1]]
+
+J:[[Não falar nada-&gt;Kiska Response V1]]</tw-passagedata><tw-passagedata pid="95" name="Armário 2" tags="" position="7453,4548" size="100,100">&lt;%
+Global.armario2Visited = true;
+%&gt;
+
+J: [[Parece que o dono dessa casa fala russo-&gt;Kiska Response W1]]
+
+J: [[Tem tantos papéis em outra língua, será que o dono dessa casa é estrangeiro?-&gt;Kiska Response W1]]
+
+J: [[Acho que um russo morou aqui.-&gt;Kiska Response W1]]
+
+J: [[Não falar nada.-&gt;Kiska Response W1]]</tw-passagedata><tw-passagedata pid="96" name="Investiga 2.B-5" tags="" position="6545,5015" size="100,100">&lt;%
+Global.investiga2b5Visited = true;
+%&gt;
+
+J: [[Acho que a pessoa que morava aqui lia muito.-&gt;Investigar 2.B]]
+
+J: [[A pessoa que morava aqui parece bem inteligente.-&gt;Investigar 2.B]]
+
+J: [[Esses livros são meio estranhos.-&gt;Investigar 2.B]]
+
+J: [[Não falar nada.-&gt;Investigar 2.B]]
+</tw-passagedata><tw-passagedata pid="97" name="Foto 2" tags="" position="6123,4942" size="100,100">&lt;%
+Global.foto2Visited = true;
+%&gt;
+
+Uma foto.
+
+J:[[&quot;Com amor, para Zigor Orlov&quot;. Quem é Zigor Orlov?-&gt;Kiska Response Y1]]
+
+J:[[Acho que o russo se chamava Zigor Orlov.-&gt;Kiska Response Y1]]
+
+J:[[Parece que o dono da casa era mesmo russo.-&gt;Kiska Response Y1]]
+
+J:[[Não falar nada.-&gt;Kiska Response Y2]]</tw-passagedata><tw-passagedata pid="98" name="Investiga 2.B-8" tags="" position="5321,4799" size="100,100">&lt;%
+Global.investiga2b8visited = true;
+%&gt;
+
+J: [[Será que alguém esconderia algo atrás de um quadro?-&gt;Investigar 2.B]]
+
+J: [[Tem tanta poeira aqui.-&gt;Investigar 2.B]]
+
+J: [[Que quadro estranho.-&gt;Kiska Response ZA1]]
+
+J: [[Não falar nada.-&gt;Investigar 2.B]]
+</tw-passagedata><tw-passagedata pid="99" name="Investiga 2.B-9" tags="" position="5317,4248" size="100,100">J:[[Achei uma chave!-&gt;Kiska Response ZB1]]
+
+J:[[Problema resolvido, achei a chave!-&gt;Kiska Response ZB2]]
+
+J:[[Ok, agora quem em sã consciência guarda uma chave num vaso de planta dentro da própria casa? Ela tava escondida, isso você não pode negar.-&gt;Kiska Response ZB3]]
+
+J:[[Não falar nada.-&gt;Abrir porta 2]]</tw-passagedata><tw-passagedata pid="100" name="Kiska Response V1" tags="" position="7566,4131" size="100,100">Kiska (Clover): Eu não deixaria a porta da minha casa aberta.
+
+[[Voltar-&gt;Investigar 2.B]]</tw-passagedata><tw-passagedata pid="101" name="Kiska Response W1" tags="" position="7291,4672" size="100,100">Kiska (Clover): Não consigo procurar se você ficar falando.
+
+J: [[O que você acha da gente pegar alguns desses documentos? São tantos e parece que ninguém vem aqui, não vão sentir falta.-&gt;Kiska Response X1]]
+
+J: [[Esses documentos são meio suspeitos. Você poderia guardar na sua mochila, por favor?-&gt;Kiska Response X2]]
+
+J: [[Posso guardar um negócio na sua mochila?-&gt;Kiska Response X3]]
+
+J: [[Não falar nada-&gt;Investigar 2.B]]</tw-passagedata><tw-passagedata pid="102" name="Kiska Response X1" tags="" position="6836,4850" size="100,100">Kiska (Clover): Não inventa.
+
+O Jogador [[guarda na mochila-&gt;Investigar 2.B]] da Kiska alguns dos documentos que achou na estante ou [[coloca de volta no lugar-&gt;Investigar 2.B]]. </tw-passagedata><tw-passagedata pid="103" name="Kiska Response X2" tags="" position="7026,4858" size="100,100">Kiska (Clover): Para com isso.
+
+O Jogador [[guarda na mochila-&gt;Investigar 2.B]] da Kiska alguns dos documentos que achou na estante ou [[coloca de volta no lugar-&gt;Investigar 2.B]]. </tw-passagedata><tw-passagedata pid="104" name="Kiska Response X3" tags="" position="7211,4843" size="100,100">Kiska (Clover): Não.
+
+O Jogador [[guarda na mochila-&gt;Investigar 2.B]] da Kiska alguns dos documentos que achou na estante ou [[coloca de volta no lugar-&gt;Investigar 2.B]]. </tw-passagedata><tw-passagedata pid="105" name="Kiska Response Y1" tags="" position="5983,5022" size="100,100">Kiska (Clover): Ninguém que você precisa conhecer pra ligar um disjuntor.
+
+A foto te intriga, então você pensa em [[tirar uma foto dela-&gt;Investigar 2.B]] com o seu celular ou [[pedir para a Kiska guardar na mochila dela.-&gt;Mochila 2]]</tw-passagedata><tw-passagedata pid="106" name="Kiska Response Y2" tags="" position="6246,5139" size="100,100">A foto te intriga, então você pensa em [[tirar uma foto dela-&gt;Investigar 2.B]] com o seu celular ou [[pedir para a Kiska guardar na mochila dela.-&gt;Mochila 2]]</tw-passagedata><tw-passagedata pid="107" name="Mochila 2" tags="" position="6097,5244" size="100,100">J:[[Quero guardar essa foto, posso por na sua mochila?-&gt;Kiska Response Z1]]
+
+J:[[Tô achando esse lugar meio estranho. Vou colocar essa foto na sua mochila, tudo bem?-&gt;Kiska Response Z2]]
+
+J:[[O bolso da sua mochila tá aberto... Deixa eu fechar.-&gt;Kiska Response Z3]]
+
+
+
+</tw-passagedata><tw-passagedata pid="108" name="Kiska Response Z1" tags="" position="5821,5037" size="100,100">Kiska (Clover): Não.
+
+O Jogador [[guarda na mochila-&gt;Investigar 2.B]] da Kiska a foto ou [[coloca de volta no lugar-&gt;Investigar 2.B]]. </tw-passagedata><tw-passagedata pid="109" name="Kiska Response Z2" tags="" position="5632,5119" size="100,100">Kiska (Clover): Para com isso.
+
+O Jogador [[guarda na mochila-&gt;Investigar 2.B]] da Kiska a foto ou [[coloca de volta no lugar-&gt;Investigar 2.B]]. </tw-passagedata><tw-passagedata pid="110" name="Kiska Response Z3" tags="" position="5401,5254" size="100,100">Kiska (Clover): Não precisa.
+
+O Jogador [[guarda na mochila-&gt;Investigar 2.B]] da Kiska a foto ou [[coloca de volta no lugar-&gt;Investigar 2.B]]. </tw-passagedata><tw-passagedata pid="111" name="Kiska Response ZA1" tags="" position="5296,4573" size="100,100">Kiska: Para de falar que tudo aqui é estranho.
+
+[[Voltar-&gt;Investigar 2.B]] </tw-passagedata><tw-passagedata pid="112" name="Kiska Response ZB1" tags="" position="4993,3991" size="100,100">Kiska (Clover): Vamos achar esse disjuntor logo.
+
+J: [[Ok, pera aí. Deixa eu ver se essa chave é daqui mesmo.-&gt;Abrir porta 2]]
+
+J: [[Vou conferir se achamos a chave certa.-&gt;Abrir porta 2]]
+
+J: [[Deixa eu testar. Vai que achamos a chave errada, a porta da frente também tá trancada.-&gt;Abrir porta 2]]
+
+J: [[Não falar nada.-&gt;Abrir porta 2]]</tw-passagedata><tw-passagedata pid="113" name="Kiska Response ZB2" tags="" position="4969,4305" size="100,100">Kiska (Clover): Achou? Vamos logo dar um jeito nesse disjuntor.
+
+J: [[Ok, pera aí. Deixa eu ver se essa chave é daqui mesmo.-&gt;Abrir porta 2]]
+
+J: [[Vou conferir se achamos a chave certa.-&gt;Abrir porta 2]]
+
+J: [[Deixa eu testar. Vai que achamos a chave errada, a porta da frente também tá trancada.-&gt;Abrir porta 2]]
+
+J: [[Não falar nada.-&gt;Abrir porta 2]]</tw-passagedata><tw-passagedata pid="114" name="Kiska Response ZB3" tags="" position="4977,4493" size="100,100">Kiska (Clover): AVamos logo ligar o disjuntor.
+
+J: [[Ok, pera aí. Deixa eu ver se essa chave é daqui mesmo.-&gt;Abrir porta 2]]
+
+J: [[Vou conferir se achamos a chave certa.-&gt;Abrir porta 2]]
+
+J: [[Deixa eu testar. Vai que achamos a chave errada, a porta da frente também tá trancada.-&gt;Abrir porta 2]]
+
+J: [[Não falar nada.-&gt;Abrir porta 2]]</tw-passagedata><tw-passagedata pid="115" name="Abrir porta 2" tags="" position="4625,4191" size="100,100">O Jogador anda até a porta e, com a chave na mão, a [[destranca-&gt;CENA 3]]. </tw-passagedata><tw-passagedata pid="116" name="Kiska Response ZD1" tags="" position="4789,3539" size="100,100">Kiska (Clover): Você poderia por favor me deixar trabalhar em silêncio?
+
+Com um CLIQUE Kiska consegue destrancar a porta. Ela fica de pé e apoia as mãos na cintura, orgulhosa.
+
+Kiska (Clover): Vamos lá.
+
+J: [[Boa!-&gt;Kiska abre porta 2]]
+
+J: [[Nem acredito que deu certo.-&gt;Kiska abre porta 2]]
+
+J: [[Cada dia aprendendo algo novo sobre você.-&gt;Kiska abre porta 2]]
+
+J: [[Não falar nada.-&gt;Kiska abre porta 2]]</tw-passagedata><tw-passagedata pid="117" name="Kiska Response ZD4" tags="" position="4778,3753" size="100,100">Com um CLIQUE Kiska consegue destrancar a porta. Ela fica de pé e apoia as mãos na cintura, orgulhosa.
+
+Kiska (Clover): Vamos lá.
+
+J: [[Boa!-&gt;Kiska abre porta 2]]
+
+J: [[Nem acredito que deu certo.-&gt;Kiska abre porta 2]]
+
+J: [[Cada dia aprendendo algo novo sobre você.-&gt;Kiska abre porta 2]]
+
+J: [[Não falar nada.-&gt;Kiska abre porta 2]]</tw-passagedata><tw-passagedata pid="118" name="Kiska Response ZC1" tags="" position="5249,3608" size="100,100">Kiska (Clover): Shhhh, assim você me atrapalha.
+
+Ela tenta abrir a porta com o grampo de cabelo.
+
+J: [[E ai-&gt;Kiska Response ZD1]]
+
+J: [[Acha que vai dar certo?-&gt;Kiska Response ZD1]]
+
+J: [[Você já fez isso antes?-&gt;Kiska Response ZD1]]
+
+J: [[Não falar nada-&gt;Kiska Response ZD4]]</tw-passagedata><tw-passagedata pid="119" name="Kiska Response ZC4" tags="" position="5243,3818" size="100,100">Ela tenta abrir a porta com o grampo de cabelo.
+
+J: [[E ai-&gt;Kiska Response ZD1]]
+
+J: [[Acha que vai dar certo?-&gt;Kiska Response ZD1]]
+
+J: [[Você já fez isso antes?-&gt;Kiska Response ZD1]]
+
+J: [[Não falar nada-&gt;Kiska Response ZD4]]</tw-passagedata><tw-passagedata pid="120" name="Kiska abre porta 2" tags="" position="4189,4318" size="100,100">A Kiska abre a porta e faz um gesto para o Jogador ir na frente.
+
+Kiska (Clover): Pode entrar primeiro.
+
+O Jogador [[passa pela porta-&gt;CENA 3]].</tw-passagedata><tw-passagedata pid="121" name="Kiska Response ZE1" tags="" position="2446,6735" size="100,100">Kiska (Clover): Não sei... Só quero ver se dá pra ligar o disjuntor.
+
+No escuro, o Jogador tateia a parede até achar o disjuntor e tenta identificar o botão para ligá-lo. 
+
+Kiska (Clover): Achou?
+
+J:[[Acho que sim.-&gt;Disjuntor]]
+
+J:[[Sim.-&gt;Disjuntor]]
+
+J:[[Talvez, pera aí.-&gt;Disjuntor]]
+
+j:[[Não falar nada.-&gt;Disjuntor]]
+
+</tw-passagedata><tw-passagedata pid="122" name="Kiska Response ZE2" tags="" position="2702,6657" size="100,100">Kiska (Clover): Eu não sou criança, Jogador. Consigo entrar em um lugar escuro. 
+
+No escuro, o Jogador tateia a parede até achar o disjuntor e tenta identificar o botão para ligá-lo. 
+
+Kiska (Clover): Achou?
+
+J:[[Acho que sim.-&gt;Disjuntor]]
+
+J:[[Sim.-&gt;Disjuntor]]
+
+J:[[Talvez, pera aí.-&gt;Disjuntor]]
+
+j:[[Não falar nada.-&gt;Disjuntor]]
+
+</tw-passagedata><tw-passagedata pid="123" name="Kiska Response ZE3" tags="" position="2942,6568" size="100,100">Kiska (Clover): Felizmente não sou você. Anda logo e sai da frente da porta.
+
+No escuro, o Jogador tateia a parede até achar o disjuntor e tenta identificar o botão para ligá-lo. 
+
+Kiska (Clover): Achou?
+
+J:[[Acho que sim.-&gt;Disjuntor]]
+
+J:[[Sim.-&gt;Disjuntor]]
+
+J:[[Talvez, pera aí.-&gt;Disjuntor]]
+
+j:[[Não falar nada.-&gt;Disjuntor]]
+
+</tw-passagedata><tw-passagedata pid="124" name="Kiska Response ZE4" tags="" position="3155,6460" size="100,100">Kiska (Clover): Não vai entrar?
+
+No escuro, o Jogador tateia a parede até achar o disjuntor e tenta identificar o botão para ligá-lo. 
+
+Kiska (Clover): Achou?
+
+J:[[Acho que sim.-&gt;Disjuntor]]
+
+J:[[Sim.-&gt;Disjuntor]]
+
+J:[[Talvez, pera aí.-&gt;Disjuntor]]
+
+j:[[Não falar nada.-&gt;Disjuntor]]
+
+</tw-passagedata><tw-passagedata pid="125" name="Disjuntor" tags="" position="3612,7277" size="100,100">Assim que o Jogador aperta o botão para ligar o disjuntor eles ouvem um BARULHO ALTO.
+
+[[Evento CRASH-&gt;CENA 4]]</tw-passagedata><tw-passagedata pid="126" name="Kiska Response ZF1" tags="" position="3994,6498" size="100,100">Kiska (Clover): Só quero ligar a porcaria do disjuntor logo.
+
+No escuro, o Jogador tateia a parede até achar o disjuntor e tenta identificar o botão para ligá-lo. 
+
+Kiska (Clover): Achou?
+
+J:[[Acho que sim.-&gt;Disjuntor]]
+
+J:[[Sim.-&gt;Disjuntor]]
+
+J:[[Talvez, pera aí.-&gt;Disjuntor]]
+
+j:[[Não falar nada.-&gt;Disjuntor]]
+
+</tw-passagedata><tw-passagedata pid="127" name="Kiska Response ZF2" tags="" position="4202,6570" size="100,100">Kiska (Clover): Eu não sou criança, Jogador. Consigo entrar em um lugar escuro.
+
+No escuro, o Jogador tateia a parede até achar o disjuntor e tenta identificar o botão para ligá-lo. 
+
+Kiska (Clover): Achou?
+
+J:[[Acho que sim.-&gt;Disjuntor]]
+
+J:[[Sim.-&gt;Disjuntor]]
+
+J:[[Talvez, pera aí.-&gt;Disjuntor]]
+
+j:[[Não falar nada.-&gt;Disjuntor]]
+
+</tw-passagedata><tw-passagedata pid="128" name="Kiska Response ZF3" tags="" position="4408,6625" size="100,100">Kiska (Clover): Felizmente não sou você. Anda logo e sai da frente da porta.
+
+No escuro, o Jogador tateia a parede até achar o disjuntor e tenta identificar o botão para ligá-lo. 
+
+Kiska (Clover): Achou?
+
+J:[[Acho que sim.-&gt;Disjuntor]]
+
+J:[[Sim.-&gt;Disjuntor]]
+
+J:[[Talvez, pera aí.-&gt;Disjuntor]]
+
+j:[[Não falar nada.-&gt;Disjuntor]]
+
+</tw-passagedata><tw-passagedata pid="129" name="Kiska Response ZF4" tags="" position="4624,6691" size="100,100">Kiska (Clover): Não vai entrar?
+
+No escuro, o Jogador tateia a parede até achar o disjuntor e tenta identificar o botão para ligá-lo. 
+
+Kiska (Clover): Achou?
+
+J:[[Acho que sim.-&gt;Disjuntor]]
+
+J:[[Sim.-&gt;Disjuntor]]
+
+J:[[Talvez, pera aí.-&gt;Disjuntor]]
+
+j:[[Não falar nada.-&gt;Disjuntor]]
+
+</tw-passagedata><tw-passagedata pid="130" name="CENA 4" tags="" position="3556,7584" size="200,200">O quarto está claro, com luz entrando pela janela já que a persiana está aberta. Kiska e o Jogador estão deitados em suas respectivas camas, a mochila da Kiska está no pé de seu colchão e a porta está fechada. O computador está ligado, iluminando parcialmente o ambiente.
+
+O Jogador acorda confuso, sem se lembrar de como voltou ao quarto. Ele se levanta e tenta ligar a luz do quarto para verificar se a energia voltou. Quando a luz acende, ele vai até a Kiska e tenta acordá-la. 
+
+J: [[Kiska, acorda.-&gt;Kiska Response ZG1]]
+
+J: [[Kiska, Kiska. Acorda por favor.-&gt;Kiska Response ZG1]]
+
+J: [[Kiska... Bom dia.-&gt;Kiska Response ZG1]]</tw-passagedata><tw-passagedata pid="131" name="Kiska Response ZG1" tags="" position="3602,7975" size="100,100">Kiska (Alice): O que foi?
+
+J: [[Tem alguma coisa estranha nesse lugar.-&gt;Kiska Response ZH1]]
+
+J: [[Já amanheceu, vamos logo pra casa. Tem alguma coisa errada aqui.-&gt;Kiska Response ZH1]]
+
+J: [[Alguma coisa aconteceu com a gente ontem.-&gt;Kiska Response ZH1]]
+
+J: [[Não falar nada.-&gt;Kiska Response ZH2]]
+
+</tw-passagedata><tw-passagedata pid="132" name="Kiska Response ZH1" tags="" position="3386,8154" size="100,100">Kiska (Alice): Do que você tá falando?
+
+J: [[Depois que a gente achou o disjuntor, não lembro mais de nada. Aí acordamos aqui, como se nada tivesse acontecido. Isso não é normal.-&gt;Kiska Response ZI1]]
+
+J: [[Não consigo me lembrar do que aconteceu depois que a gente entrou naquele quarto. Tem algo estranho acontecendo.-&gt;Kiska Response ZI1]]
+
+J: [[Alguma coisa aconteceu depois da gente achar o disjuntor. Estávamos lá, e de repente acordamos aqui.-&gt;Kiska Response ZI1]]</tw-passagedata><tw-passagedata pid="133" name="Kiska Response ZH2" tags="" position="3802,8157" size="100,100">Kiska (Alice): O que foi..?
+
+J: [[Depois que a gente achou o disjuntor, não lembro mais de nada. Aí acordamos aqui, como se nada tivesse acontecido. Isso não é normal.-&gt;Kiska Response ZI1]]
+
+J: [[Não consigo me lembrar do que aconteceu depois que a gente entrou naquele quarto. Tem algo estranho acontecendo.-&gt;Kiska Response ZI1]]
+
+J: [[Alguma coisa aconteceu depois da gente achar o disjuntor. Estávamos lá, e de repente acordamos aqui.-&gt;Kiska Response ZI1]]</tw-passagedata><tw-passagedata pid="134" name="Kiska Response ZI1" tags="" position="3597,8380" size="100,100">Kiska (Alice): Eu não sei do que você tá falando. Você deve ter sonhado.
+
+J: [[Mas olha a janela, ela tá aberta! Nós abrimos ontem antes de ir procurar o disjuntor. Aconteceu mesmo, você não consegue lembrar?-&gt;Kiska Response ZJ1]]
+
+J: [[Parece que nada aconteceu mas a porta tá fechada, eu não fechei a porta depois de ter saído do quarto.-&gt;Kiska Response ZJ1]]
+
+J: [[Não foi um sonho! Olha a janela aberta, não tava assim ontem. E a porta! Ela também tava aberta!-&gt;Kiska Response ZJ1]]
+</tw-passagedata><tw-passagedata pid="135" name="Kiska Response ZJ1" tags="" position="3597,8590" size="100,100">Kiska (Alice): Eu não lembro de nada? Não sei do que você tá falando.
+
+J: [[Você não lembra mesmo...-&gt;Computador Ligado]]
+
+J: [[Mas não é possível.-&gt;Computador Ligado]]
+
+J: [[Como você não lembra?-&gt;Computador Ligado]]
+
+J: [[Não falar nada.-&gt;Computador Ligado]]</tw-passagedata><tw-passagedata pid="136" name="Computador Ligado" tags="" position="3551,8757" size="200,100">Kiska pega seu caderninho na mochila e anota algo. O Jogador percebe que o computador está ligado e anda até ele.
+
+J: [[Eu tô falando que tem algo estranho acontecendo. O computador tava desligado quando fomos dormir.-&gt;Kiska Response ZK1]]
+
+J: [[Agora vai dizer que eu sonhei que o computador tava desligado...-&gt;Kiska Response ZK1]]
+
+J: [[Olha pro computador! Ainda vai duvidar de mim?-&gt;Kiska Response ZK1]]
+
+J: [[Não falar nada.-&gt;Kiska Response ZK1]]</tw-passagedata><tw-passagedata pid="137" name="Kiska Response ZK1" tags="" position="3597,8954" size="100,100">Kiska (Alice): Eu realmente não lembro de nada.
+
+J: [[Vem aqui.-&gt;Kiska Response ZL1]]
+
+J: [[Vem cá.-&gt;Kiska Response ZL1]]
+
+J: [[Vem aqui rapidinho.-&gt;Kiska Response ZL1]]
+
+J: [[Não falar nada.-&gt;Kiska Response ZL1]]</tw-passagedata><tw-passagedata pid="138" name="Kiska Response ZL1" tags="" position="3597,9104" size="100,100">Kiska (Alice): O que foi..?
+
+Kiska anda até o computador e para ao lado do Jogador. Ele senta na cadeira e começa a navegar em busca de algo que convença a Kiska de que tem algo estranho acontecendo naquele lugar.
+
+O computador é muito lento por ser antigo, e o Jogador navega devagar pelos arquivos. Há muitos arquivos de texto simples e uma foto chama atenção do Jogador (-10 bem-estar). Preocupado, ele percebe que o rosto da Kiska perdeu a cor muito rápido. 
+
+J:[[Kiska, tá tudo bem?-&gt;FINAL]]
+
+J:[[Você tá bem?-&gt;FINAL]]
+
+J:[[O que houve?-&gt;FINAL]]
+
+J:[[Não falar nada-&gt;FINAL]]
+</tw-passagedata><tw-passagedata pid="139" name="FINAL" tags="" position="3564,9282" size="200,200">Ouve-se o BARULHO DE ALGUÉM COLAPSANDO. </tw-passagedata><tw-passagedata pid="140" name="Olha pela janela" tags="" position="5550.666666666668,1038.3333333333333" size="100,100">Ao abrir a persiana um pouco de luz entra no quarto, iluminando o ambiente. Curios&lt;%=Global.playerGender%&gt;, você [[olha pela janela-&gt;Persiana aberta 1.B2.A]].</tw-passagedata></tw-storydata>
 
