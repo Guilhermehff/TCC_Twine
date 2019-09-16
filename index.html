@@ -107,8 +107,12 @@ $(window).on('showpassage:after', function (e, data)
 	
 });
 
-
-
+Global.deletar = function deletar() {
+	var e = document.getElementById("phistory"); 
+	var j = document.getElementById("passage"); 
+	e.innerHTML = ""; 
+	j.innerHTML = ""; 	
+}
 
 
 window.Global = Global;
@@ -268,9 +272,16 @@ Você decide investigar a &lt;%if (Global.estanteVisited  == true) {%&gt;
 &lt;span class = &quot;inactive&quot;&gt;[[estante-&gt;Estante 1]]&lt;/span&gt;&lt;%} else {%&gt;[[estante-&gt;Estante 1]]&lt;%}%&gt;; no &lt;%if (Global.computadorVisited  == true) {%&gt;&lt;span class = &quot;inactive&quot;&gt;[[computador-&gt;Computador]]&lt;/span&gt;&lt;%} else {%&gt;[[computador-&gt;Computador]]&lt;%}%&gt;; na &lt;%if (Global.janelaVisited  == true) {%&gt;&lt;span class = &quot;inactive&quot;&gt;[[janela-&gt;Janela 2]]&lt;/span&gt;&lt;%} else {%&gt;[[janela-&gt;Janela 2]]&lt;%}%&gt;; ou no &lt;%if (Global.telefoneVisited  == true) {%&gt;&lt;span class = &quot;inactive&quot;&gt;[[telefone-&gt;Telefone 1]]&lt;/span&gt;&lt;%} else {%&gt;[[telefone-&gt;Telefone 1]]&lt;%}%&gt;; ou [[seguir a Kiska-&gt;CENA 2]].
 
 &lt;%}%&gt;
-</tw-passagedata><tw-passagedata pid="17" name="Kiska Response D1" tags="" position="2292,1197" size="100,100">Kiska: Ainda quero tentar ligar ele.
+</tw-passagedata><tw-passagedata pid="17" name="Kiska Response D1" tags="" position="2292,1201" size="100,100">Kiska: Ainda quero tentar ligar ele.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="18" name="Kiska Response D2" tags="" position="2539,1172" size="100,100">Kiska: Será que aqui não tem nenhuma indicação de onde ele estaria? Deve ter algum documento da casa nessas pastas.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Escritório 1&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="18" name="Kiska Response D2" tags="" position="2539,1172" size="100,100">Kiska: Será que aqui não tem nenhuma indicação de onde ele estaria? Deve ter algum documento da casa nessas pastas.
 
 J: [[Não custa dar uma olhada antes de sair procurando.-&gt;Escritório 1]]
 
@@ -325,9 +336,23 @@ J:[[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response G1&quot;&gt;Não falar nada&lt;/a&gt;-&gt;Kiska Response G1]]</tw-passagedata><tw-passagedata pid="26" name="Kiska Response F2" tags="" position="3820,717" size="100,100">Kiska: Vamos Logo.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="27" name="Kiska Response F3" tags="" position="4108.666666666666,783" size="100,100">Kiska: É uma boa ideia.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Escritório 1&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="27" name="Kiska Response F3" tags="" position="4108.666666666666,783" size="100,100">Kiska: É uma boa ideia.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="28" name="Kiska Response F4" tags="" position="4339,857" size="100,100">Kiska (Clover):Legal, pode me ignorar mesmo. Eu vou achar esse disjuntor porque não quero ficar no escuro num lugar desconhecido.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Escritório 1&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="28" name="Kiska Response F4" tags="" position="4339,857" size="100,100">Kiska (Clover):Legal, pode me ignorar mesmo. Eu vou achar esse disjuntor porque não quero ficar no escuro num lugar desconhecido.
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Escritório 1&quot;&gt;Me desculpe Kiska, estava distraíd&lt;%=Global.playerGender%&gt;. Vou te ajudar.&lt;/a&gt;-&gt;Escritório 1]]
 
@@ -337,7 +362,14 @@ J:[[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:voi
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response G1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response G1]]</tw-passagedata><tw-passagedata pid="29" name="Kiska Response G1" tags="" position="3858,928" size="100,100">Kiska (Clover): Que seja.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="30" name="Kiska Response H1" tags="" position="4834,725" size="100,100">Kiska: Acho que a noite deixa tudo mais assustador.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Escritório 1&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="30" name="Kiska Response H1" tags="" position="4834,725" size="100,100">Kiska: Acho que a noite deixa tudo mais assustador.
 
 J: [[Talvez.-&gt;Kiska janela 1]]
 
@@ -347,8 +379,14 @@ J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:vo
 
 J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska janela 1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska janela 1]]</tw-passagedata><tw-passagedata pid="31" name="Kiska Response H2" tags="" position="5023,733" size="100,100">Kiska: Acho que qualquer vento aqui faz a luz acabar.
 
-
-[[Evento timed-&gt;Kiska janela 1]]</tw-passagedata><tw-passagedata pid="32" name="Kiska Response H3" tags="" position="5216,737" size="100,100">Kiska: Podem ter deixado algum lampião aceso, sei lá. 
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Kiska janela 1&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="32" name="Kiska Response H3" tags="" position="5216,737" size="100,100">Kiska: Podem ter deixado algum lampião aceso, sei lá. 
 
 J: [[&lt;a onclick=&quot;Global.mudarEstado(0,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska janela 1&quot;&gt;Tem uns caras andando lá perto, não sei não.&lt;/a&gt;-&gt;Kiska janela 1]]
 
@@ -377,11 +415,32 @@ J:[[&lt;a onclick=&quot;Global.mudarEstado(1,0)&quot; href=&quot;javascript:void
 
 J:[[&lt;a onclick=&quot;Global.mudarEstado(-2,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Responde F4&quot;&gt;Não falar nada&lt;/a&gt;-&gt;Kiska Response F4]]</tw-passagedata><tw-passagedata pid="36" name="Kiska Response I1" tags="" position="4536.666666666666,1080.6666666666665" size="100,100">Kiska: Vamos.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="37" name="Kiska Response I2" tags="" position="4653.333333333333,1207.6666666666667" size="100,100">Kiska: Para com isso de que tem algo estranho. Vamos logo.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Escritório 1&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="37" name="Kiska Response I2" tags="" position="4653.333333333333,1207.6666666666667" size="100,100">Kiska: Para com isso de que tem algo estranho. Vamos logo.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="38" name="Kiska Response I3" tags="" position="4718,1369" size="100,100">Kiska: ... Ok.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Escritório 1&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="38" name="Kiska Response I3" tags="" position="4718,1369" size="100,100">Kiska: ... Ok.
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="39" name="Persiana aberta 1.B2.A" tags="" position="5780,1127.3333333333333" size="100,100">A chuva parou recente pois o chão ainda está molhado, a única fonte de luz vem do celeiro e há duas silhuetas transitando por ali. Na varanda de todas as casas há frascos cheios de um líquido vermelho. A cena te intriga.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Escritório 1&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="39" name="Persiana aberta 1.B2.A" tags="" position="5780,1127.3333333333333" size="100,100">A chuva parou recente pois o chão ainda está molhado, a única fonte de luz vem do celeiro e há duas silhuetas transitando por ali. Na varanda de todas as casas há frascos cheios de um líquido vermelho. A cena te intriga.
 
 J:[[Desculpa.-&gt;Kiska Response J1]]
 
@@ -419,7 +478,14 @@ J: [[&lt;a onclick=&quot;Global.mudarEstado(-2,-1)&quot; href=&quot;javascript:v
 
 Kiska (Clover): Eu vou procurar a porcaria do disjuntor. 
 
-[[Evento timed-&gt;Escritório 1]]</tw-passagedata><tw-passagedata pid="44" name="Estante 1" tags="" position="4312,2172.6666666666665" size="100,100">&lt;%
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;Escritório 1&quot;);
+	},
+	3000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="44" name="Estante 1" tags="" position="4312,2172.6666666666665" size="100,100">&lt;%
 Global.estanteVisited  = true;
 %&gt;
 
@@ -460,7 +526,7 @@ J: [[Onde guardariam uma chave?-&gt;Kiska Response U3]]
 
 J: [[&lt;a onclick=&quot;Global.mudarEstado(0,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Investigar 2.B&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Investigar 2.B]]
 &lt;% }  %&gt;
-</tw-passagedata><tw-passagedata pid="50" name="Investigar 2.A" tags="" position="1221.9999999999998,3930" size="100,100">&lt;%Global.cena2Visited++%&gt;
+</tw-passagedata><tw-passagedata pid="50" name="Investigar 2.A" tags="" position="1221.9999999999998,3931.6666666666665" size="100,100">&lt;%Global.cena2Visited++%&gt;
 
 &lt;% if (Global.cena2Visited &lt; 2) { %&gt;
 
@@ -501,13 +567,34 @@ J: [[Você já fez isso antes?-&gt;Kiska Response T3]]
 
 J: [[Não falar nada-&gt;Kiska Response T4]]
 
-&lt;%}%&gt;</tw-passagedata><tw-passagedata pid="51" name="Kiska Response L1" tags="" position="477,3558" size="100,100">Kiska (Clover): É por isso que estamos procurando, pra descobrir.
+&lt;%}%&gt;</tw-passagedata><tw-passagedata pid="51" name="Kiska Response L1" tags="" position="477,3559.6666666666665" size="100,100">Kiska (Clover): É por isso que estamos procurando, pra descobrir.
 
-[[Evento timed-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="52" name="Kiska Response L2" tags="" position="911,3549" size="100,100">Kiska (Clover): As pessoas não precisam de um motivo concreto pra trancar um quarto.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;CENA 4&quot;);
+	},
+	2000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="52" name="Kiska Response L2" tags="" position="911,3549" size="100,100">Kiska (Clover): As pessoas não precisam de um motivo concreto pra trancar um quarto.
 
-[[Evento timed-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="53" name="Kiska Response L3" tags="" position="1192,3588" size="100,100">Kiska (Clover): É por isso que estamos procurando.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;CENA 4&quot;);
+	},
+	2000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="53" name="Kiska Response L3" tags="" position="1192,3588" size="100,100">Kiska (Clover): É por isso que estamos procurando.
 
-[[Evento timed-&gt;Investigar 2.A]]</tw-passagedata><tw-passagedata pid="54" name="Investiga 2.A-1" tags="" position="396,3815" size="100,100">&lt;%
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;CENA 4&quot;);
+	},
+	2000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="54" name="Investiga 2.A-1" tags="" position="396,3815" size="100,100">&lt;%
 Global.investiga2a1Visited = true;
 %&gt;
 
@@ -720,11 +807,32 @@ J: [[Cada dia aprendendo algo novo sobre você.-&gt;Kiska abre porta 1]]
 
 J: [[&lt;a onclick=&quot;Global.mudarEstado(-2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska abre porta 1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska abre porta 1]]</tw-passagedata><tw-passagedata pid="87" name="Kiska Response U1" tags="" position="6188,3544" size="100,100">Kiska (Clover): É por isso que estamos procurando, pra descobrir.
 
-[[Evento timed-&gt;Investigar 2.B]]</tw-passagedata><tw-passagedata pid="88" name="Kiska Response U2" tags="" position="6438,3539" size="100,100">Kiska (Clover): As pessoas não precisam de um motivo concreto pra trancar um quarto.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;CENA 4&quot;);
+	},
+	2000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="88" name="Kiska Response U2" tags="" position="6438,3539" size="100,100">Kiska (Clover): As pessoas não precisam de um motivo concreto pra trancar um quarto.
 
-[[Evento timed-&gt;Investigar 2.B]]</tw-passagedata><tw-passagedata pid="89" name="Kiska Response U3" tags="" position="6707,3546" size="100,100">Kiska (Clover): Se eu soubesse não estaria procurando.
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;CENA 4&quot;);
+	},
+	2000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="89" name="Kiska Response U3" tags="" position="6707,3546" size="100,100">Kiska (Clover): Se eu soubesse não estaria procurando.
 
-[[Evento timed-&gt;Investigar 2.B]]</tw-passagedata><tw-passagedata pid="90" name="Investigar 2.B" tags="" position="6368,3937" size="100,100">&lt;%Global.cena2Visited++%&gt;
+&lt;%
+window.setTimeout(
+	function(){
+		story.show(&quot;CENA 4&quot;);
+	},
+	2000
+);
+%&gt;</tw-passagedata><tw-passagedata pid="90" name="Investigar 2.B" tags="" position="6368,3937" size="100,100">&lt;%Global.cena2Visited++%&gt;
 
 &lt;% if (Global.cena2Visited &lt; 2) { %&gt;
 
@@ -988,17 +1096,12 @@ J:[[Talvez, pera aí.-&gt;Disjuntor]]
 
 j:[[&lt;a onclick=&quot;Global.mudarEstado(-1,-1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Disjuntor&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Disjuntor]]
 
-</tw-passagedata><tw-passagedata pid="123" name="Disjuntor" tags="" position="3612,7275.333333333333" size="100,100">&lt;%
-
-story.save()
-
-%&gt;
-
-Assim que você aperta o botão para ligar o disjuntor vocês ouvem um barulho alto.
+</tw-passagedata><tw-passagedata pid="123" name="Disjuntor" tags="" position="3612,7280.333333333334" size="100,100">Assim que você aperta o botão para ligar o disjuntor vocês ouvem um barulho alto.
 
 &lt;%
 window.setTimeout(
 	function(){
+		Global.deletar(); 
 		story.show(&quot;CENA 4&quot;);
 	},
 	3000
@@ -1059,21 +1162,16 @@ J:[[Talvez, pera aí.-&gt;Disjuntor]]
 
 j:[[Não falar nada.-&gt;Disjuntor]]
 
-</tw-passagedata><tw-passagedata pid="128" name="CENA 4" tags="" position="3557.6666666666665,7590.666666666668" size="200,200">&lt;%
+</tw-passagedata><tw-passagedata pid="128" name="CENA 4" tags="" position="3554.333333333333,7494.000000000002" size="200,200">O quarto está claro, com luz entrando pela janela já que a persiana está aberta. Amanhã está bonita e há pássaros cantando lá fora. Você e Kiska estão deitad&lt;%=Global.playerGender%&gt;s em suas respectivas camas, a mochila da Kiska está no pé do colchão e a porta está fechada. O computador está ligado, iluminando parcialmente o ambiente.
 
-story.save()
-
-%&gt;
-
-O quarto está claro, com luz entrando pela janela já que a persiana está aberta. Kiska e o Jogador estão deitados em suas respectivas camas, a mochila da Kiska está no pé de seu colchão e a porta está fechada. O computador está ligado, iluminando parcialmente o ambiente.
-
-O Jogador acorda confuso, sem se lembrar de como voltou ao quarto. Ele se levanta e tenta ligar a luz do quarto para verificar se a energia voltou. Quando a luz acende, ele vai até a Kiska e tenta acordá-la. 
+Você acorda confus&lt;%=Global.playerGender%&gt;, sem se lembrar de como voltou ao quarto. Você se levanta e tenta ligar a luz do quarto para verificar se a energia voltou. Quando a luz acende, você anda até a Kiska e tenta acordá-la. 
 
 J: [[Kiska, acorda.-&gt;Kiska Response ZG1]]
 
 J: [[Kiska, Kiska. Acorda por favor.-&gt;Kiska Response ZG1]]
 
-J: [[Kiska... Bom dia.-&gt;Kiska Response ZG1]]</tw-passagedata><tw-passagedata pid="129" name="Kiska Response ZG1" tags="" position="3602,7975" size="100,100">Kiska (Alice): O que foi?
+J: [[Kiska... Bom dia.-&gt;Kiska Response ZG1]]
+</tw-passagedata><tw-passagedata pid="129" name="Kiska Response ZG1" tags="" position="3602,7975" size="100,100">Kiska (Alice): O que foi?
 
 J: [[Tem alguma coisa estranha nesse lugar.-&gt;Kiska Response ZH1]]
 
@@ -1110,7 +1208,7 @@ J: [[Mas não é possível.-&gt;Computador Ligado]]
 
 J: [[Como você não lembra?-&gt;Computador Ligado]]
 
-J: [[Não falar nada.-&gt;Computador Ligado]]</tw-passagedata><tw-passagedata pid="134" name="Computador Ligado" tags="" position="3551,8757" size="200,100">Kiska pega seu caderninho na mochila e anota algo. O Jogador percebe que o computador está ligado e anda até ele.
+J: [[Não falar nada.-&gt;Computador Ligado]]</tw-passagedata><tw-passagedata pid="134" name="Computador Ligado" tags="" position="3551,8757" size="200,100">Kiska pega seu caderninho na mochila e anota algo. Você percebe que o computador está ligado e anda até ele.
 
 J: [[Eu tô falando que tem algo estranho acontecendo. O computador tava desligado quando fomos dormir.-&gt;Kiska Response ZK1]]
 
@@ -1126,20 +1224,20 @@ J: [[Vem cá.-&gt;Kiska Response ZL1]]
 
 J: [[Vem aqui rapidinho.-&gt;Kiska Response ZL1]]
 
-J: [[Não falar nada.-&gt;Kiska Response ZL1]]</tw-passagedata><tw-passagedata pid="136" name="Kiska Response ZL1" tags="" position="3597,9104" size="100,100">Kiska (Alice): O que foi..?
+J: [[Não falar nada.-&gt;Kiska Response ZL1]]</tw-passagedata><tw-passagedata pid="136" name="Kiska Response ZL1" tags="" position="3597,9105.666666666666" size="100,100">Kiska (Alice): O que foi..?
 
-Kiska anda até o computador e para ao lado do Jogador. Ele senta na cadeira e começa a navegar em busca de algo que convença a Kiska de que tem algo estranho acontecendo naquele lugar.
+Kiska anda até o computador e para ao seu lado. Você senta na cadeira e começa a navegar em busca de algo que a convença de que tem algo estranho acontecendo na fazenda. 
 
-O computador é muito lento por ser antigo, e o Jogador navega devagar pelos arquivos. Há muitos arquivos de texto simples e uma foto chama atenção do Jogador (-10 bem-estar). Preocupado, ele percebe que o rosto da Kiska perdeu a cor muito rápido. 
+O computador é muito lento por ser antigo e você navega devagar pelos arquivos, um pouco irritad&lt;%=Global.playerGender%&gt;. Há muitos arquivos de texto simples e uma foto chama a sua atenção. Você está prestes a abrir a foto quando percebe que que o rosto da Kiska perdeu a cor muito rápido.  
 
-J:[[Kiska, tá tudo bem?-&gt;FINAL]]
+J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-10)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;FINAL&quot;&gt;Kiska, tá tudo bem?&lt;/a&gt;-&gt;FINAL]]
 
-J:[[Você tá bem?-&gt;FINAL]]
+J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-10)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;FINAL&quot;&gt;Você tá bem?&lt;/a&gt;-&gt;FINAL]]
 
-J:[[O que houve?-&gt;FINAL]]
+J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-10)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;FINAL&quot;&gt;O que houve?&lt;/a&gt;-&gt;FINAL]]
 
-J:[[Não falar nada-&gt;FINAL]]
-</tw-passagedata><tw-passagedata pid="137" name="FINAL" tags="" position="3564,9282" size="200,200">Ouve-se o BARULHO DE ALGUÉM COLAPSANDO. </tw-passagedata><tw-passagedata pid="138" name="Olha pela janela" tags="" position="6034.666666666668,1046.3333333333333" size="100,100">Ao abrir a persiana um pouco de luz entra no quarto, iluminando o ambiente. Curios&lt;%=Global.playerGender%&gt;, você [[olha pela janela-&gt;Persiana aberta 1.B2.A]].</tw-passagedata><tw-passagedata pid="139" name="Estante 3" tags="" position="4220,2326.333333333333" size="100,100">Depois de tirar a foto, você [[coloca a lista onde a encontrou-&gt;Escritório 1]].
+J:[[&lt;a onclick=&quot;Global.mudarEstado(0,-10)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;FINAL&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;FINAL]]
+</tw-passagedata><tw-passagedata pid="137" name="FINAL" tags="" position="3564,9283.666666666666" size="200,200">Você se levanta rapidamente para ajudar a Kiska mas é tarde demais. Ela desmaia e cai no chão com um barulho alto. Enquanto você leva ela até a cama, um pensamento não consegue deixar a sua mente: por algum motivo muito estranho aquela foto fez a Kiska desmaiar.</tw-passagedata><tw-passagedata pid="138" name="Olha pela janela" tags="" position="6034.666666666668,1046.3333333333333" size="100,100">Ao abrir a persiana um pouco de luz entra no quarto, iluminando o ambiente. Curios&lt;%=Global.playerGender%&gt;, você [[olha pela janela-&gt;Persiana aberta 1.B2.A]].</tw-passagedata><tw-passagedata pid="139" name="Estante 3" tags="" position="4220,2326.333333333333" size="100,100">Depois de tirar a foto, você [[coloca a lista onde a encontrou-&gt;Escritório 1]].
 </tw-passagedata><tw-passagedata pid="140" name="Janela 3" tags="" position="4165.333333333333,2789.666666666666" size="100,100">A luz do celeiro ainda está acesa mas não tem ninguém andando por lá. Os frascos foram retirados das varandas, e logo você percebe uma sombra pela janela do celeiro. Definitivamente tem alguém ali. Você pensa em [[investigar outra coisa-&gt;Escritório 1]].
 </tw-passagedata><tw-passagedata pid="141" name="Telefone 2" tags="" position="3779.0000000000005,2934.666666666667" size="100,100">A única coisa que você consegue ouvir é um chiado, está sem linha. Você [[coloca o telefone de volta no gancho-&gt;Escritório 1]].</tw-passagedata><tw-passagedata pid="142" name="Escritório 2" tags="" position="3088.333333333334,2744" size="200,200">Você decide investigar a &lt;%if (Global.estanteVisited  == true) {%&gt;
 &lt;span class = &quot;inactive&quot;&gt;[[estante-&gt;Estante 1]]&lt;/span&gt;&lt;%} else {%&gt;[[estante-&gt;Estante 1]]&lt;%}%&gt;; no &lt;%if (Global.computadorVisited  == true) {%&gt;&lt;span class = &quot;inactive&quot;&gt;[[computador-&gt;Computador]]&lt;/span&gt;&lt;%} else {%&gt;[[computador-&gt;Computador]]&lt;%}%&gt;; na &lt;%if (Global.janelaVisited  == true) {%&gt;&lt;span class = &quot;inactive&quot;&gt;[[janela-&gt;Janela 2]]&lt;/span&gt;&lt;%} else {%&gt;[[janela-&gt;Janela 2]]&lt;%}%&gt;; ou no &lt;%if (Global.telefoneVisited  == true) {%&gt;&lt;span class = &quot;inactive&quot;&gt;[[telefone-&gt;Telefone 1]]&lt;/span&gt;&lt;%} else {%&gt;[[telefone-&gt;Telefone 1]]&lt;%}%&gt;; ou [[seguir a Kiska-&gt;CENA 2]].</tw-passagedata></tw-storydata>
