@@ -59,14 +59,20 @@ a {
 
 .falaKiska {
     color: #fff387;
+    padding-left: 60px; 
+   display: block; 
 }
 
 .falaClover {
     color: #ffe787;
+	padding-left: 60px;
+   display: block; 
 }
 
 .falaAlice {
     color: #efff87;
+    padding-left: 60px; 
+   display: block; 
 }
 
 
@@ -160,7 +166,7 @@ Você e Kiska acordam assustad&lt;%=Global.playerGender%&gt;s com um barulho alt
 
 [[&lt;a class=&quot;falaJogador&quot; onclick=&quot;Global.mudarEstado(2,0)&quot; href=&quot;javascript:void(0)&quot;data-passage=&quot;Persiana 1&quot;&gt;Kiska, tá tudo bem aí?&lt;/a&gt;-&gt;Persiana 1]]
 
-[[&lt;a class=&quot;falaJogador&quot; onclick=&quot;Global.mudarEstado(-1,0)&quot;href=&quot;javascript:void(0)&quot;data passage=&quot;Persiana 1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Persiana 1]]
+[[&lt;a class=&quot;falaJogador&quot; onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot;data-passage=&quot;Persiana 1&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Persiana 1]]
 </tw-passagedata><tw-passagedata pid="2" name="Persiana 1" tags="" position="4125,300" size="100,100">Você está deitad&lt;%=Global.playerGender%&gt; ao lado da janela, e a persiana fechada deixa o quarto ainda mais escuro. Você decide [[&lt;a onclick=&quot;Global.mudarEstado(1,1)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana aberta 1.A&quot;&gt;abrir a persiana&lt;/a&gt;-&gt;Persiana aberta 1.A]] ou [[&lt;a onclick=&quot;Global.mudarEstado(-1,-2)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Persiana fechada 1.B&quot;&gt;esperar a Kiska falar&lt;/a&gt;-&gt;Persiana fechada 1.B]].
 
 
@@ -484,7 +490,7 @@ window.setTimeout(
 	function(){
 		story.show(&quot;Escritório 1&quot;);
 	},
-	3000
+	1000
 );
 %&gt;</tw-passagedata><tw-passagedata pid="39" name="Persiana aberta 1.B2.A" tags="" position="5780,1127" size="100,100">A chuva parou recente pois o chão ainda está molhado, a única fonte de luz vem do celeiro e há duas silhuetas transitando por ali. Na varanda de todas as casas há frascos cheios de um líquido vermelho. A cena te intriga.
 
@@ -494,7 +500,7 @@ window.setTimeout(
 
 [[&lt;span class=&quot;falaJogador&quot;&gt;Pronto.&lt;/span&gt;-&gt;Kiska Response J1]]
 
-[[&lt;a class=&quot;falaJogador&quot; onclick=&quot;Global.mudarEstado(-2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response J2&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response J2]]</tw-passagedata><tw-passagedata pid="40" name="Persiana fechada 1.B2.B" tags="" position="6440,1101" size="100,100">Kiska: Obrigada, &lt;%=Global.playerName%&gt;. Adoro ser ignorada.
+[[&lt;a class=&quot;falaJogador&quot; onclick=&quot;Global.mudarEstado(-2,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response J2&quot;&gt;Não falar nada.&lt;/a&gt;-&gt;Kiska Response J2]]</tw-passagedata><tw-passagedata pid="40" name="Persiana fechada 1.B2.B" tags="" position="6440,1101" size="100,100">&lt;span class=&quot;falaClover&quot;&gt; Obrigada, &lt;%=Global.playerName%&gt;. Adoro ser ignorada. &lt;/span&gt;
 
 J: [[&lt;a onclick=&quot;Global.mudarEstado(-1,0)&quot; href=&quot;javascript:void(0)&quot; data-passage=&quot;Kiska Response K1&quot;&gt;O que?&lt;/a&gt;-&gt;Kiska Response K1]]
 
